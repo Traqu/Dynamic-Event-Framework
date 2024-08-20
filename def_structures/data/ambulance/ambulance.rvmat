@@ -1,0 +1,742 @@
+class tnl_bottom//tnl_eventambulance\ambulance\textures\bottom\tnl_bottom.rvmat
+{
+//Type: 16 (DayzSA-B)
+//Arma1 flag= 1;
+Ambient[]= 	{1,1,1,1};
+Diffuse[]= 	{1,1,1,1};
+Emmisive[]= 	{0,0,0,1};
+ForcedDiffuse[]= 	{0,0,0,0};
+Specular[]= 	{1,1,1,1};
+//Specular2[]= 	{1,1,1,1};
+//dz1 dz_Specular1[]= 	{0,0,0,1};
+//dz2 dz_Specular2[]= 	{0,0,0.3,0.99};
+//dz_Specular3[]= 	{0,0,1,1};
+//dz_Specular4[]= 	{1,1,1.42932e-43,3.22299e-44};
+SpecularPower=100;
+PixelShaderId=NormalDXTA;//1
+VertexShaderId=NormalMap;//1
+class TegGen0
+{
+	uvSource=None;
+};
+class TegGen1
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen2
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen3
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen4
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen5
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen6
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen7
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class stage1
+{
+	texture="tnl_eventambulance\ambulance\textures\bottom\ucb_bottom_nohq.paa";
+	Texgen=1;
+};
+class stage2
+{
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
+	Texgen=2;
+};
+class stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,mc)";
+	Texgen=3;
+};
+class stage4
+{
+	texture="tnl_eventambulance\ambulance\textures\bottom\ucb_bottom_as.paa";
+	Texgen=4;
+};
+class stage5
+{
+	texture="tnl_eventambulance\ambulance\textures\bottom\ucb_bottom1_smdi.paa";
+	Texgen=5;
+};
+class stage6
+{
+	texture="#(ai,64,64,1)fresnel(1.82,0.71)";
+	Texgen=6;
+};
+class stage7
+{
+	texture="dz\data\data\env_land_co.paa";
+	Texgen=7;
+};
+class stage8
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+class stage9
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+//};end class tnl_bottom
+/////////////////////////
+///SEPARATE FILE/////
+/////////////////////////
+class tnl_body//tnl_eventambulance\ambulance\textures\body\tnl_body.rvmat
+{
+//Type: 16 (DayzSA-B)
+//Arma1 flag= 1;
+Ambient[]= 	{1,1,1,1};
+Diffuse[]= 	{1,1,1,1};
+Emmisive[]= 	{0,0,0,1};
+ForcedDiffuse[]= 	{0,0,0,0};
+Specular[]= 	{1,1,1,1};
+//Specular2[]= 	{1,1,1,1};
+//dz1 dz_Specular1[]= 	{0,0,0,1};
+//dz2 dz_Specular2[]= 	{0,0,0.3,0.99};
+//dz_Specular3[]= 	{0,0,1,1};
+//dz_Specular4[]= 	{1,1,1.42932e-43,3.22299e-44};
+SpecularPower=100;
+PixelShaderId=NormalDXTA;//1
+VertexShaderId=NormalMap;//1
+class TegGen0
+{
+	uvSource=None;
+};
+class TegGen1
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen2
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen3
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen4
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen5
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen6
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen7
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class stage1
+{
+	texture="tnl_eventambulance\ambulance\textures\body\body_nohq.paa";
+	Texgen=1;
+};
+class stage2
+{
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
+	Texgen=2;
+};
+class stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,mc)";
+	Texgen=3;
+};
+class stage4
+{
+	texture="tnl_eventambulance\ambulance\textures\body\body_as.paa";
+	Texgen=4;
+};
+class stage5
+{
+	texture="tnl_eventambulance\ambulance\textures\body\body_smdi.paa";
+	Texgen=5;
+};
+class stage6
+{
+	texture="#(ai,64,64,1)fresnel(1.82,0.71)";
+	Texgen=6;
+};
+class stage7
+{
+	texture="dz\data\data\env_land_co.paa";
+	Texgen=7;
+};
+class stage8
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+class stage9
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+//};end class tnl_body
+/////////////////////////
+///SEPARATE FILE/////
+/////////////////////////
+class tnl_lights//tnl_eventambulance\ambulance\textures\lights\tnl_lights.rvmat
+{
+//Type: 16 (DayzSA-B)
+//Arma1 flag= 1;
+Ambient[]= 	{1,1,1,1};
+Diffuse[]= 	{1,1,1,1};
+Emmisive[]= 	{0,0,0,1};
+ForcedDiffuse[]= 	{0,0,0,0};
+Specular[]= 	{1,1,1,1};
+//Specular2[]= 	{1,1,1,1};
+//dz1 dz_Specular1[]= 	{0,0,0,1};
+//dz2 dz_Specular2[]= 	{0,0,0.3,0.99};
+//dz_Specular3[]= 	{0,0,1,1};
+//dz_Specular4[]= 	{1,1,1.42932e-43,3.22299e-44};
+SpecularPower=100;
+PixelShaderId=NormalDXTA;//1
+VertexShaderId=NormalMap;//1
+class TegGen0
+{
+	uvSource=None;
+};
+class TegGen1
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen2
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen3
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen4
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen5
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen6
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen7
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class stage1
+{
+	texture="tnl_eventambulance\ambulance\textures\lights\shvan95_headlights_nohq.paa";
+	Texgen=1;
+};
+class stage2
+{
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
+	Texgen=2;
+};
+class stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,mc)";
+	Texgen=3;
+};
+class stage4
+{
+	texture="tnl_eventambulance\ambulance\textures\lights\shvan95_headlights_as.paa";
+	Texgen=4;
+};
+class stage5
+{
+	texture="tnl_eventambulance\ambulance\textures\lights\shvan95_headlights1_smdi.paa";
+	Texgen=5;
+};
+class stage6
+{
+	texture="#(ai,64,64,1)fresnel(1.82,0.71)";
+	Texgen=6;
+};
+class stage7
+{
+	texture="dz\data\data\env_land_co.paa";
+	Texgen=7;
+};
+class stage8
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+class stage9
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+//};end class tnl_lights
+/////////////////////////
+///SEPARATE FILE/////
+/////////////////////////
+class tnl_wheels//tnl_eventambulance\ambulance\textures\wheels\tnl_wheels.rvmat
+{
+//Type: 16 (DayzSA-B)
+//Arma1 flag= 1;
+Ambient[]= 	{1,1,1,1};
+Diffuse[]= 	{1,1,1,1};
+Emmisive[]= 	{0,0,0,1};
+ForcedDiffuse[]= 	{0,0,0,0};
+Specular[]= 	{1,1,1,1};
+//Specular2[]= 	{1,1,1,1};
+//dz1 dz_Specular1[]= 	{0,0,0,1};
+//dz2 dz_Specular2[]= 	{0,0,0.3,0.99};
+//dz_Specular3[]= 	{0,0,1,1};
+//dz_Specular4[]= 	{1,1,1.42932e-43,3.22299e-44};
+SpecularPower=100;
+PixelShaderId=NormalDXTA;//1
+VertexShaderId=NormalMap;//1
+class TegGen0
+{
+	uvSource=None;
+};
+class TegGen1
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen2
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen3
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen4
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen5
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen6
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen7
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class stage1
+{
+	texture="tnl_eventambulance\ambulance\textures\wheels\rb7_stampedhorace_nohq.paa";
+	Texgen=1;
+};
+class stage2
+{
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
+	Texgen=2;
+};
+class stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,mc)";
+	Texgen=3;
+};
+class stage4
+{
+	texture="tnl_eventambulance\ambulance\textures\wheels\rb7_stampedhorace_as.paa";
+	Texgen=4;
+};
+class stage5
+{
+	texture="tnl_eventambulance\ambulance\textures\wheels\rb7_stampedhorace1_smdi.paa";
+	Texgen=5;
+};
+class stage6
+{
+	texture="#(ai,64,64,1)fresnel(1.82,0.71)";
+	Texgen=6;
+};
+class stage7
+{
+	texture="dz\data\data\env_land_co.paa";
+	Texgen=7;
+};
+class stage8
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+class stage9
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+//};end class tnl_wheels
+/////////////////////////
+///SEPARATE FILE/////
+/////////////////////////
+class tnl_dashboard//tnl_eventambulance\ambulance\textures\dashboard\tnl_dashboard.rvmat
+{
+//Type: 16 (DayzSA-B)
+//Arma1 flag= 1;
+Ambient[]= 	{1,1,1,1};
+Diffuse[]= 	{1,1,1,1};
+Emmisive[]= 	{0,0,0,1};
+ForcedDiffuse[]= 	{0,0,0,0};
+Specular[]= 	{1,1,1,1};
+//Specular2[]= 	{1,1,1,1};
+//dz1 dz_Specular1[]= 	{0,0,0,1};
+//dz2 dz_Specular2[]= 	{0,0,0.3,0.99};
+//dz_Specular3[]= 	{0,0,1,1};
+//dz_Specular4[]= 	{1,1,1.42932e-43,3.22299e-44};
+SpecularPower=100;
+PixelShaderId=NormalDXTA;//1
+VertexShaderId=NormalMap;//1
+class TegGen0
+{
+	uvSource=None;
+};
+class TegGen1
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen2
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen3
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen4
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen5
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen6
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class TegGen7
+{
+	uvSource=Tex;
+	class uvTransform
+	{
+		aside[] =	{   1.0000,   0.0000,   0.0000};
+		up[] =	{   0.0000,   1.0000,   0.0000};
+		dir[] =	{   0.0000,   0.0000,   0.0000};
+		pos[] =	{   0.0000,   0.0000,   0.0000};
+	};
+};
+class stage1
+{
+	texture="tnl_eventambulance\ambulance\textures\dashboard\material _31_nohq.paa";
+	Texgen=1;
+};
+class stage2
+{
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
+	Texgen=2;
+};
+class stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,mc)";
+	Texgen=3;
+};
+class stage4
+{
+	texture="tnl_eventambulance\ambulance\textures\dashboard\material _31_as.paa";
+	Texgen=4;
+};
+class stage5
+{
+	texture="tnl_eventambulance\ambulance\textures\dashboard\material _32_smdi.paa";
+	Texgen=5;
+};
+class stage6
+{
+	texture="#(ai,64,64,1)fresnel(1.82,0.71)";
+	Texgen=6;
+};
+class stage7
+{
+	texture="dz\data\data\env_land_co.paa";
+	Texgen=7;
+};
+class stage8
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+class stage9
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,dt)";
+	Filter=Point;
+	Texgen=0;
+};
+//};end class tnl_dashboard
