@@ -1,4 +1,4 @@
-class DEF__Starting_Point_Shipwreck_DE extends GameLabsLiveIndicator_Base
+class DEF__Starting_Point_Shipwreck_DE extends GameLabsLiveIndicator
 {
     static bool m_SoundInit = SoundInit();
 
@@ -19,13 +19,6 @@ override void EEInit()
         _eventPictogram = "ship"
         _eventDisplayName = "Container ship"
 #endif
-        super.EEInit();
-#ifdef DIAG
-        if ( !GetGame().IsMultiplayer() )
-        {
-            EffectSound eff = SEffectManager.PlaySound( GetSoundSet(), GetPosition(), 0.1, 0.1 );
-            eff.SetAutodestroy(true);
-        }
-#endif
+        super.EEInit(); 
     }
 }

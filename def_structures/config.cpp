@@ -11,6 +11,7 @@ class CfgPatches
             "DEF__Starting_Point_Raft_DE",
             "DEF__Starting_Point_HuntingCamp_DE",
             "DEF__Starting_Point_MedicalConvoy_DE",
+            "DEF__Starting_Point_MedicalMiscalenous_DE",
             "DEF__Starting_Point_Asteroid_DE",
             "DEF_Ammoboxes_Big_DE",
             "DEF_Ammoboxes_Single_DE",
@@ -50,6 +51,7 @@ class CfgPatches
             "DEF_Farm_Manurepile_DE",
             "DEF_FireExtinguisher_DE",
             "DEF_Forest_HumanSkeleton_DE",
+            "DEF_Furniture_Shelfs_Brown_DE",
             "DEF_Garbage_Bin_DE",
             "DEF_Garbage_Container_DE",
             "DEF_Garbage_GroundSq_3m_DE",
@@ -75,6 +77,24 @@ class CfgPatches
             "DEF_Land_Mil_Tent_Big3_DE",
             "DEF_Land_Mil_Tent_Big4_DE",
             "DEF_Land_Mil_Guardshed_DE",
+            "DEF_Medical_CURCylinder_01_F_DE",
+            "DEF_Medical_Furniture_Hospital_Transport_Bed_DE",
+            "DEF_Medical_Furniture_Lab_Beaker_DE",
+            "DEF_Medical_Furniture_Lab_Bunsen_DE",
+            "DEF_Medical_Furniture_Lab_Cylinder_Beaker_DE",
+            "DEF_Medical_Furniture_Lab_Dropper_DE",
+            "DEF_Medical_Furniture_Lab_Erlenmeyer_Flask_DE",
+            "DEF_Medical_Furniture_Lab_Microscope_DE",
+            "DEF_Medical_Furniture_Lab_Petri_Dish_DE",
+            "DEF_Medical_Furniture_Lab_Vial_DE",
+            "DEF_Medical_Furniture_Lab_Volume_Beaker_DE",
+            "DEF_Medical_Furniture_Patient_Monitor_DE",
+            "DEF_Medical_Furniture_Shelfs_Blue_DE",
+            "DEF_Medical_Furniture_Table_DE",
+            "DEF_Medical_Stretcher_Green_DE",
+            "DEF_Medical_Stretcher_Green_Folded_DE",
+            "DEF_Medical_Stretcher_Red_DE",
+            "DEF_Medical_Stretcher_Red_Folded_DE",
             "DEF_Metalcrate_02_DE",
             "DEF_Metalcrate_DE",
             "DEF_Mil_Artilery_Rampart_DE",
@@ -106,6 +126,7 @@ class CfgPatches
             "DEF_Misc_RoadBarrier_DE",
             "DEF_Misc_SupplyBox1_DE",
             "DEF_Misc_SupplyBox2_DE",
+            "DEF_Misc_Table_Camp_Small_DE",
             "DEF_Misc_Tirepile_Group_DE",
             "DEF_Misc_Toilet_Mobile_DE",
             "DEF_Misc_WoodenCrate_3x_DE",
@@ -146,7 +167,7 @@ class CfgPatches
             "DEF_Wreck_AC130J_DE",
             "DEF_Wreck_AC130J_2_DE",
             "DEF_Wreck_AC130J_Cargo_DE",
-            "DEF_Wreck_Ambulance_Flipped_DE",
+            "DEF_Wreck_Ambulance_Old_DE",
             "DEF_Wreck_Decal_Big_DE",
             "DEF_Wreck_Decal_Big_NoLC_DE",
             "DEF_Wreck_Decal_Small1_DE",
@@ -188,7 +209,7 @@ class CfgMods
 	class DynamicEventFramework_Structures
 	{
 		dir = "DynamicEventFramework";
-		credits = "JHNY(kubush) - gamelabs integration";
+		credits = "JHNY(kubush) - help with gamelabs integration";
 		author = "Traqu";
 		authorID = "76561198066157113";
 		type = "mod";
@@ -260,6 +281,12 @@ class CfgVehicles
     {
         eventPictogram = "ambulance";
         displayedName = "Medical convoy";
+    };
+
+    class DEF__Starting_Point_MedicalMiscalenous_DE : DEF__Starting_Point_Base_DE
+    {
+        eventPictogram = "hand-holding-medical";
+        displayedName = "Medical";
     };
 
     class DEF__Starting_Point_Asteroid_DE: DEF__Starting_Point_Base_DE
@@ -520,78 +547,173 @@ class CfgVehicles
 
     class DEF_Land_Mil_Tent_Big1_1_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big1_1.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big1_1.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big1_2_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big1_2.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big1_2.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big1_3_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big1_3.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big1_3.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big1_4_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big1_4.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big1_4.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big1_5_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big1_5.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big1_5.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big2_1_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big2_1.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big2_1.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big2_2_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big2_2.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big2_2.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big2_3_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big2_3.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big2_3.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big2_4_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big2_4.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big2_4.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big2_5_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big2_5.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big2_5.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big3_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big3.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big3.p3d";
     };
 
  
     class DEF_Land_Mil_Tent_Big4_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_tent_big4.p3d"
+        model="DZ\structures\military\improvised\mil_tent_big4.p3d";
     };
 
     class DEF_Land_Mil_Guardshed_DE: DynamicEventObject
     {
-        model="DZ\structures\military\improvised\mil_guardshed.p3d"
+        model="DZ\structures\military\improvised\mil_guardshed.p3d";
+    };
+
+    class DEF_Medical_CURCylinder_01_F_DE: DynamicEventObject
+    {
+        model="DZ\structures\Residential\Medical\CURCylinder_01_F.p3d";
+    };
+
+    class DEF_Medical_Furniture_Hospital_Transport_Bed_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\hospital_transport_bed\hospital_transport_bed.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Beaker_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_beaker.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Bunsen_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_bunsen.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Cylinder_Beaker_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_cylinder_beaker.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Dropper_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_dropper.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Erlenmeyer_Flask_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_erlenmeyer_flask.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Microscope_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_microscope.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Petri_Dish_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_petri_dish.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Vial_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_vial.p3d";
+    };
+
+    class DEF_Medical_Furniture_Lab_Volume_Beaker_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\school_equipment\lab_volume_beaker.p3d";
+    };
+
+    class DEF_Medical_Furniture_Patient_Monitor_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\medical\patient_monitor\patient_monitor.p3d";
+    };
+
+    class DEF_Medical_Furniture_Shelfs_Blue_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\various\shelf_dz.p3d";
+    };
+
+    class DEF_Medical_Furniture_Shelfs_Brown_DE: DynamicEventObject
+    {
+        model="DZ\structures_bliss\ruins\proxy\shelfs_small.p3d";
+    };
+
+    class DEF_Medical_Furniture_Table_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\medical\medical_table\medical_table.p3d";
+    };
+
+    class DEF_Medical_Stretcher_Green_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\beds\stretcher_green.p3d";
+    };
+
+    class DEF_Medical_Stretcher_Green_Folded_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\beds\stretcher_green_folded.p3d";
+    };
+
+    class DEF_Medical_Stretcher_Red_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\beds\stretcher_red.p3d";
+    };
+
+    class DEF_Medical_Stretcher_Red_Folded_DE: DynamicEventObject
+    {
+        model="DZ\structures\furniture\beds\stretcher_red_folded.p3d";
     };
 
     class DEF_Metalcrate_02_DE: DynamicEventObject
@@ -754,6 +876,11 @@ class CfgVehicles
         model="DZ\structures\military\misc\misc_supplybox2.p3d";
     };
 
+    class DEF_Misc_Table_Camp_Small_DE: DynamicEventObject
+    {
+        model="C:\Users\piotr\Documents\DayZ Projects\DZ\structures\residential\misc\misc_table_camp_small.p3d";
+    };
+
     class DEF_Misc_Tirepile_Group_DE: DynamicEventObject
     {
         model="DZ\structures\industrial\misc\misc_tirepile_group.p3d";
@@ -761,7 +888,7 @@ class CfgVehicles
 
     class DEF_Misc_Toilet_Mobile_DE: DynamicEventObject
     {
-        model="DZ\structures\residential\misc\misc_toilet_mobile.p3d"
+        model="DZ\structures\residential\misc\misc_toilet_mobile.p3d";
     };
 
     class DEF_Misc_WoodenCrate_3x_DE: DynamicEventObject
@@ -954,24 +1081,29 @@ class CfgVehicles
         model="DZ\structures\wrecks\Aircraft\Wreck_C130J_Cargo.p3d";
     };
 
-    class DEF_Wreck_Ambulance_Flipped: DynamicEventObject
+    //class DEF_Wreck_Ambulance_New_DE: DynamicEventObject
+    //{
+    //    model = "dynamiceventframework\def_structures\data\ambulancenew\ambulance.p3d";
+	//	hiddenSelections[] = {"Body","Bottom","Dashboard","Lights","Plate","Wheels"};
+	//	hiddenSelectionsTextures[] = {
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Body\Body_co.paa",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Bottom\UCB_BOTTOM_co.paa",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Dashboard\Material _31_co.paa",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Lights\SHVAN95_HEADLIGHTS_co.paa",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Plates\Numberplates_co.paa",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Wheels\RB7_StampedHorace_co.paa"
+    //                            };
+	//	hiddenSelectionsMaterials[] = {
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Body\TNL_Body.rvmat",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Bottom\TNL_Bottom.rvmat",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Dashboard\TNL_Dashboard.rvmat",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Lights\TNL_Lights.rvmat",
+    //                            "dynamiceventframework\def_structures\data\ambulancenew\textures\Wheels\TNL_Wheels.rvmat"};
+    //};
+
+    class DEF_Wreck_Ambulance_Old_DE: DynamicEventObject
     {
-        model = "dynamiceventframework\def_structures\data\Ambulance\ambulance_flipped.p3d";
-		hiddenSelections[] = {"Body","Bottom","Dashboard","Lights","Plate","Wheels"};
-		hiddenSelectionsTextures[] = {
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Body\Body_co.paa",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Bottom\UCB_BOTTOM_co.paa",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Dashboard\Material _31_co.paa",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Lights\SHVAN95_HEADLIGHTS_co.paa",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Plates\Numberplates_co.paa",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Wheels\RB7_StampedHorace_co.paa"
-                                };
-		hiddenSelectionsMaterials[] = {
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Body\TNL_Body.rvmat",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Bottom\TNL_Bottom.rvmat",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Dashboard\TNL_Dashboard.rvmat",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Lights\TNL_Lights.rvmat",
-                                "dynamiceventframework\def_structures\data\Ambulance\Textures\Wheels\TNL_Wheels.rvmat"};
+        model="DynamicEventFramework\def_structures\data\ambulanceold\buchankamedi.p3d";
     };
 
     class DEF_Wreck_Decal_Big_DE: DynamicEventObject

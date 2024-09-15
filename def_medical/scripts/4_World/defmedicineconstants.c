@@ -1,3 +1,7 @@
+/**
+ * The class `DEFMedicineConstants` defines constants related to dexamphetamine and adderall effects
+ * and thresholds.
+ */
 class DEFMedicineConstants
 {
     //* With current settings of healing rate (0.0001) and poisoning dosage (1000.0) it takes ~25 minutes to fully remove the subsctance from the bloodstream,
@@ -19,4 +23,15 @@ class DEFMedicineConstants
 	//				DEXAMPHETAMINE → HEALTH REGEN
 	//----------------------------------------------------------
     static const float HEALTH_REGEN_MULTIPLIER = 3.0;
+    //----------------------------------------------------------
+	//				ADDERALL
+	//----------------------------------------------------------
+    //?--------------------------------------------------------←
+    static const int ADDERALL_INJECTION_EFFECT_DURATION = 300; //? 5 min.
+    static const int ADDERALL_CONSUMPTION_EFFECT_DURATION = 60; //? 1 min.
+    //----------------------------------------------------------
+	//				PRIMOBOLAN
+	//----------------------------------------------------------
+    static const int PRIMOBOLAN_INJECTION_EFFECT_DURATION = 300; //? 5 min.
+    static const int PRIMOBOLAN_EFFECT_STRENGTH = 50 //* new temporary STAMINA_MIN_CAP value
 };

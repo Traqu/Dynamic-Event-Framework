@@ -1,4 +1,4 @@
-class DEF__Starting_Point_Base_DE extends GameLabsLiveIndicator
+class DEF__Starting_Point_MedicalMiscalenous_DE extends GameLabsLiveIndicator
 {
     static bool m_SoundInit = SoundInit();
 
@@ -16,8 +16,8 @@ class DEF__Starting_Point_Base_DE extends GameLabsLiveIndicator
     override void EEInit()
     {
 #ifdef GAMELABS
-        _eventPictogram = "question"
-        _eventDisplayName = "Dynamic event"
+        _eventPictogram = "hand-holding-medical"
+        _eventDisplayName = "Medical"
 #endif
         super.EEInit();
     }

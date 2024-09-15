@@ -1,0 +1,18 @@
+void AntibioticsAttack(float attack_value)
+	{
+		for(int i = 0; i < m_VirusPool.Count(); i++)
+		{
+			int agent_id = m_VirusPool.GetKey(i);
+			float antibiotics_resistance = 1 - m_PluginTransmissionAgents.GetAgentAntiboticsResistanceEx(agent_id, m_Player);
+			float delta = attack_value * antibiotics_resistance;
+			float old_count = m_VirusPool.Get( agent_id );
+			float new_count = old_count - delta;
+			//PrintString("delta:"+delta.ToString());
+			//PrintString("old_count:"+old_count.ToString());
+			//PrintString("new_count:"+new_count.ToString());
+			SetAgentCount(agent_id, new_count);
+		}
+	}
+
+class PlayerAgentPool :251;
+possibility to introduce better versions of tetra
