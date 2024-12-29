@@ -3,7 +3,7 @@ class MedicineConfig
 	static const string CONFIG_VERSION = "2";
 
 	private const static string MOD_FOLDER = "$profile:\\DynamicEventFramework\\";
-	private const static string CONFIG_PATH = MOD_FOLDER + "Config.json";
+	private const static string CONFIG_PATH = MOD_FOLDER + "medicine-config.json";
 
 	// Config version
 	string ConfigVersion = "";
@@ -38,14 +38,14 @@ class MedicineConfig
 	}
 };
 
-ref MedicineConfig m_MedicineConfig;
+ref MedicineConfig g_MedicineConfig;
 static MedicineConfig GetMedicineConfig()
 {
-	if (!m_MedicineConfig && GetGame().IsDedicatedServer())
+	if (!g_MedicineConfig && GetGame().IsDedicatedServer())
 	{
 		Print("[MedicineConfig] Init");
-		m_MedicineConfig = new MedicineConfig;
-		m_MedicineConfig.Load();
+		g_MedicineConfig = new MedicineConfig;
+		g_MedicineConfig.Load();
 	}
-	return m_MedicineConfig;
+	return g_MedicineConfig;
 };
