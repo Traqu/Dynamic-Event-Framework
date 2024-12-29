@@ -7,18 +7,18 @@ class DEF__Starting_Point_Shipwreck_DE extends GameLabsLiveIndicator
         CrashSoundSets.RegisterSoundSet("Dummy_Silent_SoundSet");
         return true;
     }
-	
+
     override string GetSoundSet()
     {
         return "Dummy_Silent_SoundSet";
     }
-    
-override void EEInit()
+
+    override void EEInit()
     {
-#ifdef GAMELABS
+    #ifdef GAMELABS
         _eventPictogram = "ship"
         _eventDisplayName = "Container ship"
-#endif
-        super.EEInit(); 
+    #endif
+        super.EEInit();
     }
 }

@@ -4,15 +4,20 @@ class CfgPatches
 	{
         units[]={
             "DEF__Starting_Point_Base_DE",
-            "DEF__Starting_Point_Roadblock_DE",
             "DEF__Starting_Point_AC130JCrash_DE",
-            "DEF__Starting_Point_MilitaryTents_DE",
-            "DEF__Starting_Point_Shipwreck_DE",
-            "DEF__Starting_Point_Raft_DE",
+            "DEF__Starting_Point_Asteroid_DE",
             "DEF__Starting_Point_HuntingCamp_DE",
             "DEF__Starting_Point_MedicalConvoy_DE",
             "DEF__Starting_Point_MedicalMiscalenous_DE",
-            "DEF__Starting_Point_Asteroid_DE",
+            "DEF__Starting_Point_MilitaryTents_DE",
+            "DEF__Starting_Point_Raft_DE",
+            "DEF__Starting_Point_Roadblock_DE",
+            "DEF__Starting_Point_Paratrooper_DE",
+            "DEF__Starting_Point_Shipwreck_DE",
+            "DEF_Displayable_Container_1Moh_DE",
+            "DEF_Displayable_FrozenScientist_DE",
+            "DEF_Displayable_Wreck_sed02_aban1_Police_DE",
+            "DEF_Displayable_Wreck_sed02_aban2_Police_DE",
             "DEF_Ammoboxes_Big_DE",
             "DEF_Ammoboxes_Single_DE",
             "DEF_Ammoboxes_Stacked_DE",
@@ -200,7 +205,7 @@ class CfgPatches
 
         weapons[]={};
         requiredVersion=0.1;
-        requiredAddons[]={	"DZ_Data",	"DZ_Structures", "DZ_Scripts" };
+        requiredAddons[]={ "DZ_Structures" };
 	};
 };
 
@@ -227,6 +232,7 @@ class CfgMods
 
 class CfgVehicles
 {
+    //0. BASE
     class HouseNoDestruct;
 
     class DynamicEventObject : HouseNoDestruct
@@ -235,16 +241,57 @@ class CfgVehicles
         storageCategory=4;
     };
 
+    //*  C:\Users\USER\Documents\DayZ Projects\DZ\structures\wrecks → check ancestors.
+    //*  This is the only solution that worked for me to inherit animations after 1.26. update; pointing to a `model path` stopped working...
+    //! ANIMATED ↓
+    //1.
+    class Land_Container_1Mo: HouseNoDestruct{};
+    class Land_Container_1Moh: HouseNoDestruct{};
+
+    class Land_Misc_Toilet_Mobile: HouseNoDestruct{};
+
+    //TODO → add missing vehicles
+    class Land_Wreck_Car_TwoDoors: HouseNoDestruct{};
+    class Land_Wreck_Car_ThreeDoors: HouseNoDestruct{};
+    class Land_Wreck_offroad02_aban1: HouseNoDestruct{};
+    class Land_Wreck_offroad02_aban2: HouseNoDestruct{};
+	class Land_Wreck_hb01_aban1_police: HouseNoDestruct{};
+	class Land_wreck_truck01_aban1_blue: HouseNoDestruct{};
+	class Land_wreck_truck01_aban2_blue: HouseNoDestruct{};
+
+	class Land_wreck_sed02_aban1_police_DE: HouseNoDestruct{}; //? Sakhal specific
+	class Land_wreck_sed02_aban2_police_DE: HouseNoDestruct{}; //? Sakhal specific
+
+    //2.
+    class Land_Wreck_sed01_aban1_police: Land_Wreck_hb01_aban1_police{};
+	class Land_wreck_truck01_aban1_firetruck: Land_wreck_truck01_aban1_blue{};
+	class Land_wreck_truck01_aban1_orange: Land_wreck_truck01_aban1_blue{};
+
+    //3.
+    class Land_Wreck_hb01_aban1_green_DE: Land_Wreck_Car_TwoDoors{};
+    class Land_Wreck_hb01_aban1_white_DE: Land_Wreck_Car_TwoDoors{};
+    class Land_Wreck_hb02_aban1_blue_DE: Land_Wreck_Car_ThreeDoors{};
+    class Land_Wreck_offroad02_aban1_DE: Land_Wreck_offroad02_aban1{};
+    class Land_Wreck_offroad02_aban2_DE: Land_Wreck_offroad02_aban2{};
+    class Land_Wreck_sed01_aban1_black_DE: Land_Wreck_Car_ThreeDoors{};
+    class Land_Wreck_sed01_aban1_police_DE: Land_Wreck_Car_ThreeDoors{};
+    class Land_Wreck_sed01_aban2_white_DE: Land_Wreck_Car_ThreeDoors{};
+    class Land_Wreck_sed02_aban2_grey_DE: Land_Wreck_Car_ThreeDoors{};
+    class Land_Wreck_sed02_aban2_yellow_DE: Land_Wreck_Car_ThreeDoors{};
+    class Land_wreck_truck01_aban1_firetruck_DE: Land_wreck_truck01_aban1_firetruck{};
+    class Land_wreck_truck01_aban1_orange_DE: Land_wreck_truck01_aban1_orange{};
+	class Land_wreck_truck01_aban2_firetruck: Land_wreck_truck01_aban1_firetruck{};
+    class Land_wreck_truck01_aban2_green_DE: Land_wreck_truck01_aban2_blue{};
+
+    ///4.
+    class Land_wreck_truck01_aban2_firetruck_DE: Land_wreck_truck01_aban2_firetruck{};
+    //!Animated ↑
+
+    //* StaritingPoints.
     class DEF__Starting_Point_Base_DE: DynamicEventObject
     {
         eventPictogram = "question";
         displayedName = "Dynamic event";
-    };
-
-    class DEF__Starting_Point_Roadblock_DE : DEF__Starting_Point_Base_DE
-    {
-        eventPictogram = "minus-octagon";
-        displayedName = "Roadblock";
     };
 
     class DEF__Starting_Point_AC130JCrash_DE : DEF__Starting_Point_Base_DE
@@ -253,22 +300,10 @@ class CfgVehicles
         displayedName = "Plane crash";
     };
 
-    class DEF__Starting_Point_Shipwreck_DE : DEF__Starting_Point_Base_DE
+    class DEF__Starting_Point_Asteroid_DE: DEF__Starting_Point_Base_DE
     {
-        eventPictogram = "ship";
-        displayedName = "Container ship";
-    };
-
-    class DEF__Starting_Point_Raft_DE : DEF__Starting_Point_Base_DE
-    {
-        eventPictogram = "anchor";
-        displayedName = "Shoal boat";
-    };
-    
-    class DEF__Starting_Point_MilitaryTents_DE : DEF__Starting_Point_Base_DE
-    {
-        eventPictogram = "campground";
-        displayedName = "Military tents";
+        eventPictogram = "meteor";
+        displayedName = "Meteorite";
     };
 
     class DEF__Starting_Point_HuntingCamp_DE : DEF__Starting_Point_Base_DE
@@ -289,13 +324,75 @@ class CfgVehicles
         displayedName = "Medical";
     };
 
-    class DEF__Starting_Point_Asteroid_DE: DEF__Starting_Point_Base_DE
+    class DEF__Starting_Point_MilitaryTents_DE : DEF__Starting_Point_Base_DE
     {
-        eventPictogram = "meteor";
-        displayedName = "Meteorite";
+        eventPictogram = "campground";
+        displayedName = "Military tents";
     };
 
-   class DEF_Ammoboxes_Big_DE: DynamicEventObject
+    class DEF__Starting_Point_Raft_DE : DEF__Starting_Point_Base_DE
+    {
+        eventPictogram = "anchor";
+        displayedName = "Shoal boat";
+    };
+
+    class DEF__Starting_Point_Roadblock_DE : DEF__Starting_Point_Base_DE
+    {
+        eventPictogram = "minus-octagon";
+        displayedName = "Roadblock";
+    };
+
+    class DEF__Starting_Point_Paratrooper_DE : DEF__Starting_Point_Base_DE
+    {
+        eventPictogram = "scarecrow";
+        displayedName = "Hanged paratrooper";
+    };
+
+    class DEF__Starting_Point_Shipwreck_DE : DEF__Starting_Point_Base_DE
+    {
+        eventPictogram = "ship";
+        displayedName = "Container ship";
+    };
+
+    //! Displayables ↓
+    //? Sakhal specific
+    class DEF_Displayable_Container_1Moh_DE: Land_Container_1Moh //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        eventPictogram = "container-storage";
+        displayedName = "Washed container";
+    };
+
+    //? Sakhal specific
+    class DEF_Displayable_FrozenScientist_DE: DEF__Starting_Point_Base_DE //* Not-animated
+    {
+        model="DZ\characters\zombies\Static_FrozenScientist.p3d";
+        eventPictogram = "head-side-virus";
+        displayedName = "Frozen scientist";
+    };
+
+    //? Sakhal specific
+    class DEF_Displayable_Wreck_sed02_aban1_Police_DE: Land_wreck_sed02_aban1_police_DE //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        eventPictogram = "taxi";
+        displayedName = "Police car";
+    };
+
+    //? Sakhal specific
+    class DEF_Displayable_Wreck_sed02_aban2_Police_DE: Land_wreck_sed02_aban2_police_DE //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        eventPictogram = "taxi";
+        displayedName = "Police car";
+    };
+    //!Displayables ↑
+
+    //* GenericObjects.
+    class DEF_Ammoboxes_Big_DE: DynamicEventObject
     {
         model="DZ\structures_bliss\underground\storage\proxy\ammoboxes_big.p3d";
     };
@@ -345,14 +442,16 @@ class CfgVehicles
         model="DZ\structures\roads\panels\path_panels_damaged.p3d";
     };
 
-    class DEF_Container_1Mo_DE: DynamicEventObject
+    class DEF_Container_1Mo_DE: Land_Container_1Mo  //!Animated
     {
-        model="DZ\structures\industrial\containers\container_1mo.p3d";
+        scope=1;
+        storageCategory=4;
     };
 
-    class DEF_Container_1Moh_DE: DynamicEventObject
+    class DEF_Container_1Moh_DE: Land_Container_1Moh  //!Animated
     {
-        model="DZ\structures\industrial\containers\container_1moh.p3d";
+        scope=1;
+        storageCategory=4;
     };
 
     class DEF_Dead_MassGrave_15m_DE: DynamicEventObject
@@ -550,67 +649,56 @@ class CfgVehicles
         model="DZ\structures\military\improvised\mil_tent_big1_1.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big1_2_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big1_2.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big1_3_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big1_3.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big1_4_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big1_4.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big1_5_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big1_5.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big2_1_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big2_1.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big2_2_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big2_2.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big2_3_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big2_3.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big2_4_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big2_4.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big2_5_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big2_5.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big3_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big3.p3d";
     };
 
- 
     class DEF_Land_Mil_Tent_Big4_DE: DynamicEventObject
     {
         model="DZ\structures\military\improvised\mil_tent_big4.p3d";
@@ -886,9 +974,10 @@ class CfgVehicles
         model="DZ\structures\industrial\misc\misc_tirepile_group.p3d";
     };
 
-    class DEF_Misc_Toilet_Mobile_DE: DynamicEventObject
+    class DEF_Misc_Toilet_Mobile_DE: Land_Misc_Toilet_Mobile  //!Animated
     {
-        model="DZ\structures\residential\misc\misc_toilet_mobile.p3d";
+        scope=1;
+        storageCategory=4;
     };
 
     class DEF_Misc_WoodenCrate_3x_DE: DynamicEventObject
@@ -1176,74 +1265,99 @@ class CfgVehicles
         model="DZ\structures\wrecks\vehicles\wreck_ural.p3d";
     };
 
-    class DEF_Wreck_Hb01_Aban1_Green_DE: DynamicEventObject
+    class DEF_Wreck_Hb01_Aban1_Green_DE: Land_Wreck_hb01_aban1_green_DE  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_hb01_aban1_green.p3d";
+        scope=1;
+        storageCategory=4;
     };
 
-    class DEF_Wreck_Hb01_Aban1_White_DE: DynamicEventObject
+    class DEF_Wreck_Hb01_Aban1_White_DE: Land_Wreck_Car_TwoDoors  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_hb01_aban1_white.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\Wreck_hb01_aban1_white.p3d";
     };
 
-    class DEF_Wreck_Hb02_Aban1_Blue_DE: DynamicEventObject
+    class DEF_Wreck_Hb02_Aban1_Blue_DE: Land_Wreck_Car_ThreeDoors  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_hb02_aban1_blue.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\Wreck_hb02_aban1_blue.p3d";
     };
 
-    class DEF_Wreck_Offroad02_Aban1_DE: DynamicEventObject
+    class DEF_Wreck_Offroad02_Aban1_DE: Land_Wreck_offroad02_aban1  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_offroad02_aban1.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\wreck_offroad02_aban1.p3d";
     };
 
-    class DEF_Wreck_Offroad02_Aban2_DE: DynamicEventObject
+    class DEF_Wreck_Offroad02_Aban2_DE: Land_Wreck_offroad02_aban2  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_offroad02_aban2.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\wreck_offroad02_aban2.p3d";
     };
 
-    class DEF_Wreck_Sed01_Aban1_Black_DE: DynamicEventObject
+    class DEF_Wreck_Sed01_Aban1_Black_DE: Land_Wreck_Car_ThreeDoors  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_sed01_aban1_black.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\Wreck_sed01_aban1_black.p3d";
     };
 
-    class DEF_Wreck_Sed01_Aban1_Police_DE: DynamicEventObject
+    class DEF_Wreck_Sed01_Aban1_Police_DE: Land_Wreck_sed01_aban1_police  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_sed01_aban1_police.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\Wreck_sed01_aban1_police.p3d";
     };
 
-    class DEF_Wreck_Sed01_Aban2_White_DE: DynamicEventObject
+    class DEF_Wreck_Sed01_Aban2_White_DE: Land_Wreck_Car_ThreeDoors  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\Wreck_sed01_aban2_white.p3d";
     };
 
-    class DEF_Wreck_Sed02_Aban2_Grey_DE: DynamicEventObject
+    class DEF_Wreck_Sed02_Aban2_Grey_DE: Land_Wreck_Car_ThreeDoors  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_sed02_aban2_grey.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\Wreck_sed02_aban2_grey.p3d";
     };
 
-    class DEF_Wreck_Sed02_Aban2_Yellow_DE: DynamicEventObject
+    class DEF_Wreck_Sed02_Aban2_Yellow_DE: Land_Wreck_Car_ThreeDoors  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_sed02_aban2_yellow.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\Wreck_sed02_aban2_yellow.p3d";
     };
 
-    class DEF_Wreck_Truck01_Aban1_Firetruck_DE: DynamicEventObject
+    class DEF_Wreck_Truck01_Aban1_Firetruck_DE: Land_wreck_truck01_aban1_firetruck  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_truck01_aban1_firetruck.p3d";
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\wreck_truck01_aban1_firetruck.p3d";
     };
 
-    class DEF_Wreck_Truck01_Aban1_Orange_DE: DynamicEventObject
+    class DEF_Wreck_Truck01_Aban1_Orange_DE: Land_wreck_truck01_aban1_orange  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_truck01_aban1_orange.p3d";
+        scope=1;
+        storageCategory=4;
     };
 
-    class DEF_Wreck_Truck01_Aban2_Firetruck_DE: DynamicEventObject
+    class DEF_Wreck_Truck01_Aban2_Firetruck_DE: Land_wreck_truck01_aban2_firetruck  //!Animated
     {
-        model="DZ\structures\wrecks\vehicles\wreck_truck01_aban2_firetruck.p3d";
+        scope=1;
+        storageCategory=4;
     };
 
-    class DEF_Wreck_Truck01_Aban2_Green_DE: DynamicEventObject
-    {
-        model="DZ\structures\wrecks\vehicles\wreck_truck01_aban2_green.p3d";
+    class DEF_Wreck_Truck01_Aban2_Green_DE: Land_wreck_truck01_aban2_blue  //!Animated
+   {
+        scope=1;
+        storageCategory=4;
+		model="\DZ\structures\Wrecks\Vehicles\wreck_truck01_aban2_green.p3d";
     };
 };
 
@@ -1277,7 +1391,7 @@ class CfgSoundshaders
 
     class PlaneCrash_Distant_SoundShader: HeliCrash_Distant_SoundShader
 	{
-		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\planecrash",1}};	
+		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\planecrash",1}};
 		volume = 1.5;
 		range = 4000;
 	};

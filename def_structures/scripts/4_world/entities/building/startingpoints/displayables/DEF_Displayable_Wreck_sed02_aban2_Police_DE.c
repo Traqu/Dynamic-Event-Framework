@@ -1,4 +1,4 @@
-class DEF__Starting_Point_Roadblock_DE extends GameLabsLiveIndicator
+class DEF_Displayable_Wreck_sed02_aban2_Police_DE extends GameLabsLiveIndicator
 {
     static bool m_SoundInit = SoundInit();
 
@@ -16,8 +16,8 @@ class DEF__Starting_Point_Roadblock_DE extends GameLabsLiveIndicator
     override void EEInit()
     {
     #ifdef GAMELABS
-        _eventPictogram = "minus-octagon"
-        _eventDisplayName = "Roadblock"
+        _eventPictogram = "taxi"
+        _eventDisplayName = "Police car"
     #endif
         super.EEInit();
     }

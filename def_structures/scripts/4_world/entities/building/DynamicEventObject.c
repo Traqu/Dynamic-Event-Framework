@@ -1,0 +1,1 @@
+class DynamicEventObject extends House {};

@@ -12,10 +12,7 @@ class CfgPatches
 		};
 
 		requiredVersion=0.1;
-		requiredAddons[]=
-		{
-			"DZ_Data"
-		};
+		requiredAddons[]= { "DZ_Gear_Medical" };
 	};
 };
 
@@ -25,14 +22,26 @@ class CfgMods
 	{
 		dir = "DynamicEventFramework";
 		type = "mod";
-		dependencies[] = {"World"};
+		dependencies[] = {"World", "Game", "Mission"};
 		class defs
 		{
+			//class gameScriptModule //TODO configs 
+			//{
+			//	value = "";
+			//	files[] = {"DynamicEventFramework/def_medical/Scripts/3_Game"};
+			//};
+
 			class worldScriptModule
 			{
 				value = "";
 				files[] = {"DynamicEventFramework/def_medical/Scripts/4_World"};
 			};
+
+			//class missionScriptModule //TODO RPCs
+			//{
+			//	value = "";
+			//	files[] = {"DynamicEventFramework/def_medical/Scripts/5_Mission"};
+			//};
 		};
 	};
 };
@@ -43,7 +52,6 @@ class CfgVehicles
 	class Epinephrine;
 	class VitaminBottle;
 	class PainkillerTablets;
-
 
 	class AdderallAutoInjector_DEF : Epinephrine
     {

@@ -7,7 +7,7 @@ class DEF__Starting_Point_Raft_DE extends GameLabsLiveIndicator
         CrashSoundSets.RegisterSoundSet("Dummy_Silent_SoundSet");
         return true;
     }
-	
+
     override string GetSoundSet()
     {
         return "Dummy_Silent_SoundSet";
@@ -15,10 +15,10 @@ class DEF__Starting_Point_Raft_DE extends GameLabsLiveIndicator
 
     override void EEInit()
     {
-#ifdef GAMELABS
+    #ifdef GAMELABS
         _eventPictogram = "anchor"
         _eventDisplayName = "Shoal boat"
-#endif
-        super.EEInit(); 
+    #endif
+        super.EEInit();
     }
 }

@@ -124,17 +124,20 @@ modded class DayZPlayerImplementAiming //TODO Deplete
 		{
 			m_HoldingBreathSet = false;
 		}
-		
+
 		if (!m_PlayerPb.IsHoldingBreath() && m_LastSwayMultiplier == PlayerSwayConstants.SWAY_MULTIPLIER_DEFAULT && m_HorizontalNoiseXAxisOffset != 0)
 		{
 			m_HorizontalNoiseXAxisOffset = 0;
 			m_BreathingXAxisOffset = 0;
 			m_BreathingYAxisOffset = 0;
 		}
-		
+
 		if (m_PlayerPb.IsHoldingBreath())
 		{
 			ModifiersManager modifiersManager = m_PlayerPb.GetModifiersManager();
+
+			if(modifiersManager)
+			{
         	bool isConsumededAdderallActive = modifiersManager.IsModifierActive(eCustomModifiers.MDF_CONSUMPTION_ADDERALL);
         	bool isInjectedAdderallActive = modifiersManager.IsModifierActive(eCustomModifiers.MDF_INJECTION_ADDERALL);
 
@@ -142,7 +145,13 @@ modded class DayZPlayerImplementAiming //TODO Deplete
        			{
 					m_PlayerPb.DepleteStamina(EStaminaModifiers.HOLD_BREATH,pDt*speed);
        			}
+			}
+			else
+			{
+				m_PlayerPb.DepleteStamina(EStaminaModifiers.HOLD_BREATH,pDt*speed);
+			}
 		}
+
 		#ifdef DEVELOPER
 		DbgPrintAimingImplement("----------------------------");
 		#endif

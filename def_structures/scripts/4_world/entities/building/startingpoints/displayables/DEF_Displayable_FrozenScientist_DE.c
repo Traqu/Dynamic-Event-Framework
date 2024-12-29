@@ -1,4 +1,4 @@
-class DEF__Starting_Point_Roadblock_DE extends GameLabsLiveIndicator
+class DEF_Displayable_FrozenScientist_DE extends GameLabsLiveIndicator
 {
     static bool m_SoundInit = SoundInit();
 
@@ -16,8 +16,8 @@ class DEF__Starting_Point_Roadblock_DE extends GameLabsLiveIndicator
     override void EEInit()
     {
     #ifdef GAMELABS
-        _eventPictogram = "minus-octagon"
-        _eventDisplayName = "Roadblock"
+        _eventPictogram = "head-side-virus"
+        _eventDisplayName = "Frozen scientist"
     #endif
         super.EEInit();
     }

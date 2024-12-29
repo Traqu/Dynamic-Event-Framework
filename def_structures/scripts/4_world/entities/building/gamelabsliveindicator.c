@@ -2,7 +2,7 @@
 
 class GameLabsLiveIndicator extends CrashBase
 {
-#ifdef GAMELABS 
+#ifdef GAMELABS
     protected string _eventPictogram = "question";
     protected string _eventDisplayName = "Dynamic event";
     private ref _Event _registeredInstance;

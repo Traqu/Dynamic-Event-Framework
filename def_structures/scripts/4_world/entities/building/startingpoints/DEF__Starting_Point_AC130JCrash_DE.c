@@ -7,18 +7,18 @@ class DEF__Starting_Point_AC130JCrash_DE extends GameLabsLiveIndicator
         CrashSoundSets.RegisterSoundSet("PlaneCrash_Distant_SoundSet");
         return true;
     }
-	
+
     override string GetSoundSet()
     {
         return "PlaneCrash_Distant_SoundSet";
     }
-    
+
     override void EEInit()
     {
-#ifdef GAMELABS
+    #ifdef GAMELABS
         _eventPictogram = "plane"
         _eventDisplayName = "Plane crash"
-#endif
-        super.EEInit(); 
+    #endif
+        super.EEInit();
     }
 }

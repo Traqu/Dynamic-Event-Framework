@@ -7,18 +7,18 @@ class DEF__Starting_Point_MedicalMiscalenous_DE extends GameLabsLiveIndicator
         CrashSoundSets.RegisterSoundSet("Dummy_Silent_SoundSet");
         return true;
     }
-	
+
     override string GetSoundSet()
     {
         return "Dummy_Silent_SoundSet";
     }
-    
+
     override void EEInit()
     {
-#ifdef GAMELABS
+    #ifdef GAMELABS
         _eventPictogram = "hand-holding-medical"
         _eventDisplayName = "Medical"
-#endif
+    #endif
         super.EEInit();
     }
 }

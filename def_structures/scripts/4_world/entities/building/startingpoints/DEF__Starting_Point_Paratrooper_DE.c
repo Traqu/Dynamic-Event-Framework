@@ -1,4 +1,4 @@
-class DEF__Starting_Point_Roadblock_DE extends GameLabsLiveIndicator
+class DEF__Starting_Point_Paratrooper_DE extends GameLabsLiveIndicator
 {
     static bool m_SoundInit = SoundInit();
 
@@ -13,11 +13,11 @@ class DEF__Starting_Point_Roadblock_DE extends GameLabsLiveIndicator
         return "Dummy_Silent_SoundSet";
     }
 
-    override void EEInit()
+override void EEInit()
     {
     #ifdef GAMELABS
-        _eventPictogram = "minus-octagon"
-        _eventDisplayName = "Roadblock"
+        _eventPictogram = "scarecrow"
+        _eventDisplayName = "Hanged paratrooper"
     #endif
         super.EEInit();
     }
