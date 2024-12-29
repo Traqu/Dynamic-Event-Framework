@@ -12,7 +12,7 @@ modded class MissionGameplay
 		{
 			Param1<ref BunkerSchedulerConfig> data;
 			if (!ctx.Read(data)) return;
-
+		
 			Print("[DynamicEventFramework] Received medicine config");
 			g_MedicineConfig = data.param1;
 		}
