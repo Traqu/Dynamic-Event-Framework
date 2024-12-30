@@ -2,6 +2,8 @@
  * The class `DEFMedicineConstants` defines constants related to dexamphetamine and adderall effects
  * and thresholds.
  */
+
+
 class DEFMedicineConstants
 {
     //* With current settings of healing rate (0.0001) and poisoning dosage (1000.0) it takes ~25 minutes to fully remove the subsctance from the bloodstream,
@@ -22,22 +24,21 @@ class DEFMedicineConstants
     //----------------------------------------------------------
 	//				DEXAMPHETAMINE → HEALTH REGEN
 	//----------------------------------------------------------
-    static const float HEALTH_REGEN_MULTIPLIER = 3.0;
+//!    static const float HEALTH_REGEN_MULTIPLIER = GetMedicineConfig().HealthRegenMultiplier;
     //----------------------------------------------------------
 	//				ADDERALL
 	//----------------------------------------------------------
-    static const int ADDERALL_INJECTION_EFFECT_DURATION = 300; //? 5 min.
-    static const int ADDERALL_CONSUMPTION_EFFECT_DURATION = 60; //? 1 min.
+//!    static const int ADDERALL_INJECTION_EFFECT_DURATION = GetMedicineConfig().AdderallInjectionEffectDuration; //? 5 min.
+//!    static const int ADDERALL_CONSUMPTION_EFFECT_DURATION = GetMedicineConfig().AdderallConsumptionEffectDuration; //? 1 min.
     //----------------------------------------------------------
 	//				PRIMOBOLAN
 	//----------------------------------------------------------
-    static const int PRIMOBOLAN_INJECTION_EFFECT_DURATION = 300; //? 5 min.
-    static const int PRIMOBOLAN_EFFECT_STRENGTH = 50; //* new temporary STAMINA_MIN_CAP value
+//!    static const int PRIMOBOLAN_INJECTION_EFFECT_DURATION = GetMedicineConfig().PrimobolanInjectionEffectDuration; //? 5 min.
+//!    static const int PRIMOBOLAN_EFFECT_STRENGTH = GetMedicineConfig().PrimobolanEffectStrength; //* new temporary STAMINA_MIN_CAP value
 };
 
 
-//! this is version of above code, with JSON config used for chosen constants. RPC need to be done before it will work properly on a client side
-
+//!DEPRECATED ↓ (had no RPCs and values could not obey JSON settings)
 //class DEFMedicineConstants
 //{
 //    //* With current settings of healing rate (0.0001) and poisoning dosage (1000.0) it takes ~25 minutes to fully remove the subsctance from the bloodstream,
@@ -58,15 +59,15 @@ class DEFMedicineConstants
 //    //----------------------------------------------------------
 //	//				DEXAMPHETAMINE → HEALTH REGEN
 //	//----------------------------------------------------------
-//    static const float HEALTH_REGEN_MULTIPLIER = GetMedicineConfig().HealthRegenMultiplier;
+//    static const float HEALTH_REGEN_MULTIPLIER = 3.0;
 //    //----------------------------------------------------------
 //	//				ADDERALL
 //	//----------------------------------------------------------
-//    static const int ADDERALL_INJECTION_EFFECT_DURATION = GetMedicineConfig().AdderallInjectionEffectDuration; //? 5 min.
-//    static const int ADDERALL_CONSUMPTION_EFFECT_DURATION = GetMedicineConfig().AdderallConsumptionEffectDuration; //? 1 min.
+//    static const int ADDERALL_INJECTION_EFFECT_DURATION = 300; //? 5 min.
+//    static const int ADDERALL_CONSUMPTION_EFFECT_DURATION = 60; //? 1 min.
 //    //----------------------------------------------------------
 //	//				PRIMOBOLAN
 //	//----------------------------------------------------------
-//    static const int PRIMOBOLAN_INJECTION_EFFECT_DURATION = GetMedicineConfig().PrimobolanInjectionEffectDuration; //? 5 min.
-//    static const int PRIMOBOLAN_EFFECT_STRENGTH = GetMedicineConfig().PrimobolanEffectStrength; //* new temporary STAMINA_MIN_CAP value
+//    static const int PRIMOBOLAN_INJECTION_EFFECT_DURATION = 300; //? 5 min.
+//    static const int PRIMOBOLAN_EFFECT_STRENGTH = 50; //* new temporary STAMINA_MIN_CAP value
 //};

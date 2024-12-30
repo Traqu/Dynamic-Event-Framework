@@ -10,9 +10,9 @@ modded class MissionGameplay
 	{
 		if (type == CallType.Client)
 		{
-			Param1<ref BunkerSchedulerConfig> data;
+			Param1<ref MedicineConfig> data;
 			if (!ctx.Read(data)) return;
-		
+
 			Print("[DynamicEventFramework] Received medicine config");
 			g_MedicineConfig = data.param1;
 		}

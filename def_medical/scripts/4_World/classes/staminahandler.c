@@ -119,7 +119,7 @@ modded class StaminaHandler
 
     void SetPrimobolanStaminaCap()
     {
-        m_StaminaCap = CalculateNewStaminaCap(DEFMedicineConstants.PRIMOBOLAN_EFFECT_STRENGTH);
+        m_StaminaCap = CalculateNewStaminaCap(GetMedicineConfig().PrimobolanEffectStrength);
     }
 
     void KeepCfgGameplayStaminaCap()
@@ -129,6 +129,6 @@ modded class StaminaHandler
 
     bool IsMinStaminaCapGreaterThanPrimobolanCap()
     {
-        return CfgGameplayHandler.GetStaminaMinCap() > DEFMedicineConstants.PRIMOBOLAN_EFFECT_STRENGTH;
+        return CfgGameplayHandler.GetStaminaMinCap() > GetMedicineConfig().PrimobolanEffectStrength;
     }
 }

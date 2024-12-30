@@ -4,14 +4,14 @@ modded class MissionServer
     {
         GetRPCManager().AddRPC("DEF_MEDICINE", "GetMedicineServerConfig", this, SingeplayerExecutionType.Server);
     }
-    
+
     override void OnInit()
     {
     	super.OnInit();
-    
+
     	Print("[DynamicEventFramework] OnInit - Loaded config successfully ver. " + GetMedicineConfig().ConfigVersion);
     }
-    
+
     void GetMedicineServerConfig(CallType type, ParamsReadContext ctx, PlayerIdentity sender, Object target)
     {
         if (type == CallType.Server)

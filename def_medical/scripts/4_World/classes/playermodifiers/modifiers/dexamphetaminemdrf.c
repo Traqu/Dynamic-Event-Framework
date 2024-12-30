@@ -79,7 +79,7 @@ class DexamphetamineMdfr: ModifierBase
             ForceDisplayAscendingHealthTendency(player, 2);
         }
 
-        float health_buff = DEFMedicineConstants.HEALTH_REGEN_MULTIPLIER * PlayerConstants.HEALTH_REGEN_MAX * deltaT;
+        float health_buff = GetMedicineConfig().HealthRegenMultiplier * PlayerConstants.HEALTH_REGEN_MAX * deltaT;
         player.AddHealth("", "Health", health_buff);
     }
 

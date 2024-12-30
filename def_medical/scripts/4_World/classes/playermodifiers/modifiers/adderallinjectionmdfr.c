@@ -22,7 +22,7 @@ class AdderallInjectionMdfr : ModifierBase
 	
 	override string GetDebugText()
 	{
-		return (DEFMedicineConstants.ADDERALL_INJECTION_EFFECT_DURATION - GetAttachedTime()).ToString();
+		return (GetMedicineConfig().AdderallInjectionEffectDuration - GetAttachedTime()).ToString();
 	}
 	
 	override void OnActivate(PlayerBase player)
@@ -39,7 +39,7 @@ class AdderallInjectionMdfr : ModifierBase
 	{
 		float attached_time = GetAttachedTime();
 		
-		if( attached_time >= DEFMedicineConstants.ADDERALL_INJECTION_EFFECT_DURATION )
+		if( attached_time >= GetMedicineConfig().AdderallInjectionEffectDuration )
 		{
 			return true;
 		}

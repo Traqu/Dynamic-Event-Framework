@@ -4,6 +4,7 @@ class CfgPatches
 	{
         units[]={
             "DEF__Starting_Point_Base_DE",
+            "DEF__Starting_Point_NO_DISPLAY_DE",
             "DEF__Starting_Point_AC130JCrash_DE",
             "DEF__Starting_Point_Asteroid_DE",
             "DEF__Starting_Point_HuntingCamp_DE",
@@ -288,6 +289,10 @@ class CfgVehicles
     //!Animated ↑
 
     //* StaritingPoints.
+
+
+    class DEF__Starting_Point_NO_DISPLAY_DE: DynamicEventObject{}; //? This one proved to be useful so I am adding it; has no script to it so will not be displayd on map.
+
     class DEF__Starting_Point_Base_DE: DynamicEventObject
     {
         eventPictogram = "question";

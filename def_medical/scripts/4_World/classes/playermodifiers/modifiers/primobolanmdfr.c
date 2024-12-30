@@ -25,7 +25,7 @@ class PrimobolanMdfr : ModifierBase
 	
 	override string GetDebugText()
 	{
-		return (DEFMedicineConstants.PRIMOBOLAN_INJECTION_EFFECT_DURATION - GetAttachedTime()).ToString();
+		return (GetMedicineConfig().PrimobolanInjectionEffectDuration - GetAttachedTime()).ToString();
 	}
 	
 	override void OnActivate(PlayerBase player)
@@ -50,7 +50,7 @@ class PrimobolanMdfr : ModifierBase
 	{
 		float attached_time = GetAttachedTime();
 		
-		if( attached_time >= DEFMedicineConstants.PRIMOBOLAN_INJECTION_EFFECT_DURATION )
+		if( attached_time >= GetMedicineConfig().PrimobolanInjectionEffectDuration )
 		{
 			return true;
 		}

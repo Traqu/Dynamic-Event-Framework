@@ -25,11 +25,11 @@ class CfgMods
 		dependencies[] = {"World", "Game", "Mission"};
 		class defs
 		{
-			//class gameScriptModule //TODO configs 
-			//{
-			//	value = "";
-			//	files[] = {"DynamicEventFramework/def_medical/Scripts/3_Game"};
-			//};
+			class gameScriptModule //TODO configs 
+			{
+				value = "";
+				files[] = {"DynamicEventFramework/def_medical/Scripts/3_Game"};
+			};
 
 			class worldScriptModule
 			{
@@ -37,11 +37,11 @@ class CfgMods
 				files[] = {"DynamicEventFramework/def_medical/Scripts/4_World"};
 			};
 
-			//class missionScriptModule //TODO RPCs
-			//{
-			//	value = "";
-			//	files[] = {"DynamicEventFramework/def_medical/Scripts/5_Mission"};
-			//};
+			class missionScriptModule
+			{
+				value = "";
+				files[] = {"DynamicEventFramework/def_medical/Scripts/5_Mission"};
+			};
 		};
 	};
 };
