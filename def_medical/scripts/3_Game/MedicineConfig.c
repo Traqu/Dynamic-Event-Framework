@@ -1,6 +1,6 @@
 class MedicineConfig
 {
-	static const string CONFIG_VERSION = "2";
+	static const string CONFIG_VERSION = "1";
 
 	private const static string MOD_FOLDER = "$profile:\\DynamicEventFramework\\";
 	private const static string CONFIG_PATH = MOD_FOLDER + "medicine-config.json";

@@ -7,4 +7,4 @@ tooltip = "DEF - way to enchance dynamic events in DayZ";							// tool tip on m
 overview = "Dynamic Event Framework (DEF) adds DE version of StaticObjects that will persist on restarts and gamelabs integration. Also includes custom items that can be spawned within additional themed-events.";    // overview
 action = "https://steamcommunity.com/sharedfiles/filedetails/?id=3308469207";   // link
 author = "Traqu";	// author
-version = "2.0";    // version
+version = "4.0.2";    // version
