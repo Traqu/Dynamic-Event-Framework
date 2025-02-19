@@ -2,207 +2,7 @@ class CfgPatches
 {
 	class DynamicEventFramework_Structures
 	{
-        units[]={
-            "DEF__Starting_Point_Base_DE",
-            "DEF__Starting_Point_NO_DISPLAY_DE",
-            "DEF__Starting_Point_AC130JCrash_DE",
-            "DEF__Starting_Point_Asteroid_DE",
-            "DEF__Starting_Point_HuntingCamp_DE",
-            "DEF__Starting_Point_MedicalConvoy_DE",
-            "DEF__Starting_Point_MedicalMiscalenous_DE",
-            "DEF__Starting_Point_MilitaryTents_DE",
-            "DEF__Starting_Point_Raft_DE",
-            "DEF__Starting_Point_Roadblock_DE",
-            "DEF__Starting_Point_Paratrooper_DE",
-            "DEF__Starting_Point_Shipwreck_DE",
-            "DEF_Displayable_Container_1Moh_DE",
-            "DEF_Displayable_FrozenScientist_DE",
-            "DEF_Displayable_Wreck_sed02_aban1_Police_DE",
-            "DEF_Displayable_Wreck_sed02_aban2_Police_DE",
-            "DEF_Ammoboxes_Big_DE",
-            "DEF_Ammoboxes_Single_DE",
-            "DEF_Ammoboxes_Stacked_DE",
-            "DEF_Animal_Guts_DE",
-            "DEF_Concrete_Panel_DE",
-            "DEF_Concrete_Panel_Damaged_DE",
-            "DEF_Concrete_Panel_2_DE",
-            "DEF_Concrete_Panels_DE",
-            "DEF_Concrete_Path_DE",
-            "DEF_Concrete_Path_Damaged_DE",
-            "DEF_Container_1Mo_DE",
-            "DEF_Container_1Moh_DE",
-            "DEF_Dead_MassGrave_15m_DE",
-            "DEF_Dead_Pile1_DE",
-            "DEF_Dead_Pile2_DE",
-            "DEF_Dead_Pile3_DE",
-            "DEF_Dead_Pile4_DE",
-            "DEF_Decal_Damage_Long2_DE",
-            "DEF_Decal_Damage_Long3_DE",
-            "DEF_Decal_Damage_Long4_DE",
-            "DEF_Decal_Damage_Medium1_DE",
-            "DEF_Decal_Damage_Medium2_DE",
-            "DEF_Decal_Dirt_Rocks2_DE",
-            "DEF_Decal_Heli_Army_DE",
-            "DEF_Decal_Oilstain1_DE",
-            "DEF_Decal_Oilstain2_DE",
-            "DEF_Decal_Oilstain3_DE",
-            "DEF_Decal_Oilstain4_DE",
-            "DEF_Decal_Runway_Skidmarks_DE",
-            "DEF_Decal_Runway_Skidmarks_End_DE",
-            "DEF_Decal_Runway_Skidmarks_End2_DE",
-            "DEF_Decon_HazmatBag_01_F_DE",
-            "DEF_Decon_LayFlatHose_01_CurveLong_F_DE",
-            "DEF_Decon_LayFlatHose_01_Roll_F_DE",
-            "DEF_Decon_LayFlatHose_01_SBend_F_DE",
-            "DEF_Farm_Manurepile_DE",
-            "DEF_FireExtinguisher_DE",
-            "DEF_Forest_HumanSkeleton_DE",
-            "DEF_Furniture_Shelfs_Brown_DE",
-            "DEF_Garbage_Bin_DE",
-            "DEF_Garbage_Container_DE",
-            "DEF_Garbage_GroundSq_3m_DE",
-            "DEF_Garbage_GroundSq_5m_DE",
-            "DEF_Garbage_GroundSq_5m_NoLC_DE",
-            "DEF_Garbage_Pile2_DE",
-            "DEF_Garbage_Pile3_DE",
-            "DEF_Garbage_Pile7_DE",
-            "DEF_HBarrier_1m_DE",
-            "DEF_HBarrier_4m_DE",
-            "DEF_HBarrier_6m_DE",
-            "DEF_HBarrier_Round_DE",
-            "DEF_Land_Mil_Tent_Big1_1_DE",
-            "DEF_Land_Mil_Tent_Big1_2_DE",
-            "DEF_Land_Mil_Tent_Big1_3_DE",
-            "DEF_Land_Mil_Tent_Big1_4_DE",
-            "DEF_Land_Mil_Tent_Big1_5_DE",
-            "DEF_Land_Mil_Tent_Big2_1_DE",
-            "DEF_Land_Mil_Tent_Big2_2_DE",
-            "DEF_Land_Mil_Tent_Big2_3_DE",
-            "DEF_Land_Mil_Tent_Big2_4_DE",
-            "DEF_Land_Mil_Tent_Big2_5_DE",
-            "DEF_Land_Mil_Tent_Big3_DE",
-            "DEF_Land_Mil_Tent_Big4_DE",
-            "DEF_Land_Mil_Guardshed_DE",
-            "DEF_Medical_CURCylinder_01_F_DE",
-            "DEF_Medical_Furniture_Hospital_Transport_Bed_DE",
-            "DEF_Medical_Furniture_Lab_Beaker_DE",
-            "DEF_Medical_Furniture_Lab_Bunsen_DE",
-            "DEF_Medical_Furniture_Lab_Cylinder_Beaker_DE",
-            "DEF_Medical_Furniture_Lab_Dropper_DE",
-            "DEF_Medical_Furniture_Lab_Erlenmeyer_Flask_DE",
-            "DEF_Medical_Furniture_Lab_Microscope_DE",
-            "DEF_Medical_Furniture_Lab_Petri_Dish_DE",
-            "DEF_Medical_Furniture_Lab_Vial_DE",
-            "DEF_Medical_Furniture_Lab_Volume_Beaker_DE",
-            "DEF_Medical_Furniture_Patient_Monitor_DE",
-            "DEF_Medical_Furniture_Shelfs_Blue_DE",
-            "DEF_Medical_Furniture_Table_DE",
-            "DEF_Medical_Stretcher_Green_DE",
-            "DEF_Medical_Stretcher_Green_Folded_DE",
-            "DEF_Medical_Stretcher_Red_DE",
-            "DEF_Medical_Stretcher_Red_Folded_DE",
-            "DEF_Metalcrate_02_DE",
-            "DEF_Metalcrate_DE",
-            "DEF_Mil_Artilery_Rampart_DE",
-            "DEF_Mil_Artillery_Nest_DE",
-            "DEF_Mil_Camonet_Big_East_DE",
-            "DEF_Mil_Camonet_Big_West_DE",
-            "DEF_Mil_Camonet_Roof_East_DE",
-            "DEF_Mil_Camonet_Roof_West_DE",
-            "DEF_Mil_Camonet_Side_East_DE",
-            "DEF_Mil_Camonet_Side_West_DE",
-            "DEF_Mil_Guardtower_DE",
-            "DEF_Misc_Bagfence_3m_DE",
-            "DEF_Misc_Bagfence_Corner_DE",
-            "DEF_Misc_Bagfence_Round_DE",
-            "DEF_Misc_Barbedwire_DE",
-            "DEF_Misc_BoxWooden_DE",
-            "DEF_Misc_Chair_Camp1_DE",
-            "DEF_Misc_Chair_Camp2_DE",
-            "DEF_Misc_Chair_Plastic_DE",
-            "DEF_Misc_ConcreteBlock2_DE",
-            "DEF_Misc_ConcreteBlock2_Damaged_DE",
-            "DEF_Misc_DragonTeeth_Single_DE",
-            "DEF_Misc_Gunrack_DE",
-            "DEF_Misc_Pallet_DE",
-            "DEF_Misc_Pallets1_DE",
-            "DEF_Misc_Pallets2_DE",
-            "DEF_Misc_Pallets3_DE",
-            "DEF_Misc_Razorwire_DE",
-            "DEF_Misc_RoadBarrier_DE",
-            "DEF_Misc_SupplyBox1_DE",
-            "DEF_Misc_SupplyBox2_DE",
-            "DEF_Misc_Table_Camp_Small_DE",
-            "DEF_Misc_Tirepile_Group_DE",
-            "DEF_Misc_Toilet_Mobile_DE",
-            "DEF_Misc_WoodenCrate_3x_DE",
-            "DEF_Misc_WoodenCrate_5x_DE",
-            "DEF_Misc_Woodtable_Indoor_DE",
-            "DEF_Misc_Woodtable_Outdoor_DE",
-            "DEF_Roadblock_Bags_Curve_DE",
-            "DEF_Roadblock_Bags_EndL_DE",
-            "DEF_Roadblock_Bags_EndR_DE",
-            "DEF_Roadblock_Bags_Long_DE",
-            "DEF_Roadblock_CncBlock_DE",
-            "DEF_Roadblock_CncBlocks_Long_DE",
-            "DEF_Roadblock_CncBlocks_Short_DE",
-            "DEF_Roadblock_Pillbox_DE",
-            "DEF_Roadblock_Table_DE",
-            "DEF_Roadblock_Wood_Long_DE",
-            "DEF_Roadblock_Wood_Small_DE",
-            "DEF_Roadblock_WoodenCrate_DE",
-            "DEF_Rubble_DirtPile_Large_DE",
-            "DEF_Rubble_Glass_DE",
-            "DEF_ShellCrater1_Decal_DE",
-            "DEF_ShellCrater2_Debris_DE",
-            "DEF_ShellCrater2_Small_DE",
-            "DEF_Sign_Enochmil_Warning1_Pl_DE",
-            "DEF_Sign_Roadblock_Arrow_DE",
-            "DEF_Sign_Roadblock_Stop_DE",
-            "DEF_Wall_Barricade1_4_DE",
-            "DEF_Wall_CncBarrier_4Block_DE",
-            "DEF_Wall_CncBarrier_Block_DE",
-            "DEF_Wall_MilCncBarrier_DE",
-            "DEF_Wall_Tincom_3_DE",
-            "DEF_Wall_Tincom_9_DE",
-            "DEF_Wall_Tincom_9_2_DE",
-            "DEF_Wall_Tincom_Pole_DE",
-            "DEF_Wreck_BMP1_DE",
-            "DEF_Wreck_BMP2_DE",
-            "DEF_Wreck_BRDM_DE",
-            "DEF_Wreck_AC130J_DE",
-            "DEF_Wreck_AC130J_2_DE",
-            "DEF_Wreck_AC130J_Cargo_DE",
-            "DEF_Wreck_Ambulance_Old_DE",
-            "DEF_Wreck_Decal_Big_DE",
-            "DEF_Wreck_Decal_Big_NoLC_DE",
-            "DEF_Wreck_Decal_Small1_DE",
-            "DEF_Wreck_Decal_Small1_NoLC_DE",
-            "DEF_Wreck_Decal_Small2_DE",
-            "DEF_Wreck_Decal_Small2_NoLC_DE",
-            "DEF_Wreck_HMMWV_DE",
-            "DEF_Wreck_Ikarus_DE",
-            "DEF_Wreck_Mi8_Crashed_DE",
-            "DEF_Wreck_PowGen_DE",
-            "DEF_Wreck_T72_Chassis_DE",
-            "DEF_Wreck_T72_Turret_DE",
-            "DEF_Wreck_Uaz_DE",
-            "DEF_Wreck_Ural_DE",
-            "DEF_Wreck_Hb01_Aban1_Green_DE",
-            "DEF_Wreck_Hb01_Aban1_White_DE",
-            "DEF_Wreck_Hb02_Aban1_Blue_DE",
-            "DEF_Wreck_Offroad02_Aban1_DE",
-            "DEF_Wreck_Offroad02_Aban2_DE",
-            "DEF_Wreck_Sed01_Aban1_Black_DE",
-            "DEF_Wreck_Sed01_Aban1_Police_DE",
-            "DEF_Wreck_Sed01_Aban2_White_DE",
-            "DEF_Wreck_Sed02_Aban2_Grey_DE",
-            "DEF_Wreck_Sed02_Aban2_Yellow_DE",
-            "DEF_Wreck_Truck01_Aban1_Firetruck_DE",
-            "DEF_Wreck_Truck01_Aban1_Orange_DE",
-            "DEF_Wreck_Truck01_Aban2_Firetruck_DE",
-            "DEF_Wreck_Truck01_Aban2_Green_DE"
-        };
+        units[]={};
 
         weapons[]={};
         requiredVersion=0.1;
@@ -260,8 +60,10 @@ class CfgVehicles
 	class Land_wreck_truck01_aban1_blue: HouseNoDestruct{};
 	class Land_wreck_truck01_aban2_blue: HouseNoDestruct{};
 
-	class Land_wreck_sed02_aban1_police_DE: HouseNoDestruct{}; //? Sakhal specific
-	class Land_wreck_sed02_aban2_police_DE: HouseNoDestruct{}; //? Sakhal specific
+	class Land_wreck_sed02_aban1_police_DE: HouseNoDestruct{};  //? Sakhal specific
+	class Land_wreck_sed02_aban2_police_DE: HouseNoDestruct{};  //? Sakhal specific
+    class Land_Boat_Small9: HouseNoDestruct{};                  //? Sakhal specific
+    class Land_Ship_Medium2: HouseNoDestruct{};                 //? Sakhal specific
 
     //2.
     class Land_Wreck_sed01_aban1_police: Land_Wreck_hb01_aban1_police{};
@@ -289,8 +91,6 @@ class CfgVehicles
     //!Animated ↑
 
     //* StaritingPoints.
-
-
     class DEF__Starting_Point_NO_DISPLAY_DE: DynamicEventObject{}; //? This one proved to be useful so I am adding it; has no script to it so will not be displayd on map.
 
     class DEF__Starting_Point_Base_DE: DynamicEventObject
@@ -313,7 +113,7 @@ class CfgVehicles
 
     class DEF__Starting_Point_HuntingCamp_DE : DEF__Starting_Point_Base_DE
     {
-        eventPictogram = "campfire";
+        eventPictogram = "hotjar";
         displayedName = "Survivor camp";
     };
 
@@ -335,12 +135,6 @@ class CfgVehicles
         displayedName = "Military tents";
     };
 
-    class DEF__Starting_Point_Raft_DE : DEF__Starting_Point_Base_DE
-    {
-        eventPictogram = "anchor";
-        displayedName = "Shoal boat";
-    };
-
     class DEF__Starting_Point_Roadblock_DE : DEF__Starting_Point_Base_DE
     {
         eventPictogram = "minus-octagon";
@@ -353,9 +147,21 @@ class CfgVehicles
         displayedName = "Hanged paratrooper";
     };
 
+    class DEF__Starting_Point_Raft_DE : DEF__Starting_Point_Base_DE
+    {
+        eventPictogram = "anchor";
+        displayedName = "Shoal boat";
+    };
+
+    class DEF__Starting_Point_Boat_DE : DEF__Starting_Point_Base_DE
+    {
+        eventPictogram = "boat";
+        displayedName = "Boat";
+    };
+
     class DEF__Starting_Point_Shipwreck_DE : DEF__Starting_Point_Base_DE
     {
-        eventPictogram = "ship";
+        eventPictogram = "docker";
         displayedName = "Container ship";
     };
 
@@ -1364,40 +1170,190 @@ class CfgVehicles
         storageCategory=4;
 		model="\DZ\structures\Wrecks\Vehicles\wreck_truck01_aban2_green.p3d";
     };
+
+    class DEF_Land_Ship_Big_FrontA_DE : DynamicEventObject
+    {
+        model="\DZ\structures\Wrecks\Ships\Ship_Big_FrontA.p3d";
+    };
+
+    class DEF_Land_Ship_Big_FrontB_DE : DynamicEventObject
+    {
+        model="\DZ\structures\Wrecks\Ships\Ship_Big_FrontB.p3d";
+    };
+
+    class DEF_Land_Ship_Big_BackA_DE : DynamicEventObject
+    {
+        model="\DZ\structures\Wrecks\Ships\Ship_Big_BackA.p3d";
+    };
+
+    class DEF_Land_Ship_Big_BackB_DE : DynamicEventObject
+    {
+        model="\DZ\structures\Wrecks\Ships\Ship_Big_BackB.p3d";
+    };
+
+    class DEF_Land_Ship_Big_Castle_DE : DynamicEventObject
+    {
+        model="\DZ\structures\Wrecks\Ships\Ship_Big_Castle.p3d";
+    };
+
+    class DEF_StaticObj_Wreck_Ship_Medium_Front_DE : DynamicEventObject
+    {
+        model="DZ\structures\Wrecks\Ships\Ship_Medium_Front.p3d";
+    };
+
+    class DEF_StaticObj_Wreck_Ship_Medium_Back_DE : DynamicEventObject
+    {
+        model="DZ\structures\Wrecks\Ships\Ship_Medium_Back.p3d";
+    };
+
+    class DEF_Land_Ship_Medium2_DE : Land_Ship_Medium2 //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        model="DZ\structures_sakhal\wrecks\Ship_Medium2.p3d";
+    };
+
+    class DEF_StaticObj_Wreck_Ship_Big_Lifeboat_DE : DynamicEventObject
+    {
+        model="DZ\structures\Wrecks\Ships\Ship_Big_Lifeboat.p3d";
+    };
+
+    class DEF_Land_Boat_Small7_DE : DynamicEventObject
+    {
+        model="DZ\structures_sakhal\wrecks\Boat_Small7.p3d";
+    };
+
+    class DEF_Land_Boat_Small8_Blue_DE : DynamicEventObject
+    {
+        model="DZ\structures_sakhal\wrecks\Boat_Small8_Blue.p3d";
+    };
+
+    class DEF_Land_Boat_Small8_Red_DE : DynamicEventObject
+    {
+        model="DZ\structures_sakhal\wrecks\Boat_Small8_Red.p3d";
+    };
+
+    class DEF_Land_Boat_Small9_DE : Land_Boat_Small9 //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        model="DZ\structures_sakhal\wrecks\Boat_Small9.p3d";
+    };
+
+    class DEF_Land_Boat_Small10_Blue_DE : DynamicEventObject
+    {
+        model="DZ\structures_sakhal\wrecks\Boat_Small10_Blue.p3d";
+    };
+
+    class DEF_Land_Boat_Small10_Red_DE : DynamicEventObject
+    {
+        model="DZ\structures_sakhal\wrecks\Boat_Small10_Blue.p3d";
+    };
+
+    //* Particles.
+    //? Fires.
+    class DEF_PARTICLE_BONFIRE_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_CAMP_SMALL_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_CAMP_NORMAL_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_CAMP_STOVE_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_HOUSE_SMALL_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_HOUSE_NORMAL_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_BARREL_SMALL_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_BARREL_NORMAL_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_OVEN_SMALL_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_OVEN_NORMAL_FIRE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_TORCH_T1_DE: DynamicEventObject{};
+    class DEF_PARTICLE_TORCH_T2_DE: DynamicEventObject{};
+    class DEF_PARTICLE_TORCH_T3_DE: DynamicEventObject{};
+    //? Environmental.
+    class DEF_PARTICLE_SPOOKY_MIST_DE: DynamicEventObject{};
+    class DEF_PARTICLE_CONTAMINATED_AREA_GAS_BIGASS_DE: DynamicEventObject{};
+    class DEF_PARTICLE_ENV_SWARMING_FLIES_DE: DynamicEventObject{};
+    //? Smokes.
+    class DEF_PARTICLE_BONFIRE_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_GRENADE_M18_BLACK_LOOP_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_GRENADE_M18_GREEN_LOOP_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_GRENADE_M18_PURPLE_LOOP_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_GRENADE_M18_RED_LOOP_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_GRENADE_M18_WHITE_LOOP_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_GRENADE_M18_YELLOW_LOOP_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_GRENADE_RDG2_BLACK_LOOP_DE: DynamicEventObject{};
+    class DEF_PARTICLE_GRENADE_RDG2_WHITE_LOOP_DE: DynamicEventObject{};
+    class DEF_PARTICLE_HATCHBACK_COOLANT_OVERHEATED_DE: DynamicEventObject{};
+    class DEF_PARTICLE_HATCHBACK_ENGINE_OVERHEATED_DE: DynamicEventObject{};
+    class DEF_PARTICLE_POWER_GENERATOR_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_ROADFLARE_BURNING_SMOKE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_SMOKE_GENERIC_WRECK_DE: DynamicEventObject{};
+    class DEF_PARTICLE_SMOKING_CAR_ENGINE_DE: DynamicEventObject{};
+    class DEF_PARTICLE_SMOKING_HELI_WRECK_DE: DynamicEventObject{};
+    class DEF_PARTICLE_VOLCANO_DE: DynamicEventObject{};
 };
 
-//* Sounds for events on spawns
+    //* Sounds for events on spawns
 class CfgSoundsets
 {
-	class HeliCrash_Distant_Base_SoundSet;
-	class Dummy_Silent_SoundSet: HeliCrash_Distant_Base_SoundSet
-	{
-		soundShaders[] = {"Dummy_Silent_SoundShader"};
-		sound3DProcessingType = "ThunderNear3DProcessingType";
-	};
+    class WaterStream_SoundSet;
+    class HeliCrash_Distant_Base_SoundSet;
+
+    class Dummy_Silent_SoundSet: HeliCrash_Distant_Base_SoundSet
+    {
+        soundShaders[] = {"Dummy_Silent_SoundShader"};
+    };
+
+    class Shipwreck_SoundSet: HeliCrash_Distant_Base_SoundSet
+    {
+        soundShaders[] = {"Shipwreck_SoundShader"};
+    };
 
     class PlaneCrash_Distant_SoundSet: HeliCrash_Distant_Base_SoundSet
-	{
-		soundShaders[] = {"PlaneCrash_Distant_SoundShader"};
-		sound3DProcessingType = "ThunderNear3DProcessingType";
-	};
+    {
+        soundShaders[] = {"PlaneCrash_Distant_SoundShader"};
+    };
+
+    class BoatWaves_SoundSet: WaterStream_SoundSet
+    {
+        soundShaders[] = {"BoatWaves_SoundShader"};
+		rangeCurve="Smooth1Curve";
+    };
+
+    class BoatCreakingDeck_SoundSet: WaterStream_SoundSet
+    {
+        soundShaders[] = {"BoatCreakingDeck_SoundShader"};
+		rangeCurve="Smooth1Curve";
+    };
 };
 
-//* Use sets not shaders...
+    //* Use sets not shaders...
 class CfgSoundshaders
 {
-	class HeliCrash_Distant_SoundShader;
-	class Dummy_Silent_SoundShader: HeliCrash_Distant_SoundShader
+	class Dummy_Silent_SoundShader
 	{
-		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\silentdummy",1}};
-		volume = 0;
+		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\silentdummy", 1}};
+		volume = 0.0;
 		range = 0;
 	};
 
-    class PlaneCrash_Distant_SoundShader: HeliCrash_Distant_SoundShader
+    class Shipwreck_SoundShader
 	{
-		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\planecrash",1}};
-		volume = 1.5;
-		range = 4000;
+		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\shipHorn_2", 1}};
+		volume = 2.00;
+		range = 2200;
+	};
+
+    class BoatWaves_SoundShader
+	{
+		samples[]= {
+                        {"dynamiceventframework\def_structures\data\sounds\environment\ambient\water\boat_waves", 1},
+                        {"dynamiceventframework\def_structures\data\sounds\environment\ambient\water\boat_waves_2", 1}
+                   };
+		volume= 1.0;
+		range=7;
+	};
+
+    class BoatCreakingDeck_SoundShader
+	{
+		samples[]= {{"dynamiceventframework\def_structures\data\sounds\environment\ambient\water\creaking-deck", 1}};
+		volume= 1.0;
+		range=11;
 	};
 };

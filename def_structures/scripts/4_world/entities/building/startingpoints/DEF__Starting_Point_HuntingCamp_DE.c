@@ -16,7 +16,7 @@ class DEF__Starting_Point_HuntingCamp_DE extends GameLabsLiveIndicator
     override void EEInit()
     {
     #ifdef GAMELABS
-        _eventPictogram = "campfire"
+        _eventPictogram = "hotjar"
         _eventDisplayName = "Survivor camp"
     #endif
         super.EEInit();

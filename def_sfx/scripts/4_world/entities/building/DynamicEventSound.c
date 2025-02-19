@@ -14,7 +14,7 @@ class DynamicEventSound extends DynamicEventObject
 			}
 		}
 	}
-	
+
 	override void EEDelete(EntityAI parent)
 	{
 		if ( !GetGame().IsDedicatedServer() )

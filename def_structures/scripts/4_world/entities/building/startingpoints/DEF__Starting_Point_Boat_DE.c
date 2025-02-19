@@ -1,23 +1,23 @@
-class DEF__Starting_Point_Shipwreck_DE extends GameLabsLiveIndicator
+class DEF__Starting_Point_Boat_DE extends GameLabsLiveIndicator
 {
     static bool m_SoundInit = SoundInit();
 
     static bool SoundInit()
     {
-        CrashSoundSets.RegisterSoundSet("Shipwreck_SoundSet");
+        CrashSoundSets.RegisterSoundSet("Dummy_Silent_SoundSet");
         return true;
     }
 
     override string GetSoundSet()
     {
-        return "Shipwreck_SoundSet";
+        return "Dummy_Silent_SoundSet";
     }
 
     override void EEInit()
     {
     #ifdef GAMELABS
-        _eventPictogram = "docker"
-        _eventDisplayName = "Container ship"
+        _eventPictogram = "ship"
+        _eventDisplayName = "Boat"
     #endif
         super.EEInit();
     }
