@@ -113,7 +113,7 @@ class CfgVehicles
 
     class DEF__Starting_Point_HuntingCamp_DE : DEF__Starting_Point_Base_DE
     {
-        eventPictogram = "hotjar";
+        eventPictogram = "campfire";
         displayedName = "Survivor camp";
     };
 
@@ -161,7 +161,7 @@ class CfgVehicles
 
     class DEF__Starting_Point_Shipwreck_DE : DEF__Starting_Point_Base_DE
     {
-        eventPictogram = "docker";
+        eventPictogram = "anchor";
         displayedName = "Container ship";
     };
 
