@@ -38,7 +38,7 @@ class CfgVehicles
 
     class DynamicEventObject : HouseNoDestruct
     {
-        scope=1;
+        scope=1;    //TODO (if persistence issued occur) ~Sumrak - https://discord.com/channels/452035973786632194/499468381960011797/661593561141346314
         storageCategory=4;
     };
 
@@ -46,8 +46,10 @@ class CfgVehicles
     //*  This is the only solution that worked for me to inherit animations after 1.26. update; pointing to a `model path` stopped working...
     //! ANIMATED ↓
     //1.
+    class ContainerLockedBase: HouseNoDestruct{};
     class Land_Container_1Mo: HouseNoDestruct{};
     class Land_Container_1Moh: HouseNoDestruct{};
+
 
     class Land_Misc_Toilet_Mobile: HouseNoDestruct{};
 
@@ -168,6 +170,42 @@ class CfgVehicles
     //! Displayables ↓
     //? Sakhal specific
     class DEF_Displayable_Container_1Moh_DE: Land_Container_1Moh //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        eventPictogram = "container-storage";
+        displayedName = "Washed container";
+    };
+
+    //? Sakhal specific
+    class DEF_Displayable_ContainerLocked_Blue_DE: ContainerLockedBase //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        eventPictogram = "container-storage";
+        displayedName = "Washed container";
+    };
+
+    //? Sakhal specific
+    class DEF_Displayable_ContainerLocked_Orange_DE: ContainerLockedBase //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        eventPictogram = "container-storage";
+        displayedName = "Washed container";
+    };
+
+    //? Sakhal specific
+    class DEF_Displayable_ContainerLocked_Red_DE: ContainerLockedBase //!Animated
+    {
+        scope=1;
+        storageCategory=4;
+        eventPictogram = "container-storage";
+        displayedName = "Washed container";
+    };
+
+    //? Sakhal specific
+    class DEF_Displayable_ContainerLocked_Yellow_DE: ContainerLockedBase //!Animated
     {
         scope=1;
         storageCategory=4;
