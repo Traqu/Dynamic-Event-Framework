@@ -157,13 +157,13 @@ class CfgVehicles
 
     class DEF__Starting_Point_Boat_DE : DEF__Starting_Point_Base_DE
     {
-        eventPictogram = "boat";
+        eventPictogram = "anchor";
         displayedName = "Boat";
     };
 
     class DEF__Starting_Point_Shipwreck_DE : DEF__Starting_Point_Base_DE
     {
-        eventPictogram = "anchor";
+        eventPictogram = "ship";
         displayedName = "Container ship";
     };
 

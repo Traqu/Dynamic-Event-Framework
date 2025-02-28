@@ -16,7 +16,7 @@ class DEF__Starting_Point_Shipwreck_DE extends GameLabsLiveIndicator
     override void EEInit()
     {
     #ifdef GAMELABS
-        _eventPictogram = "anchor"
+        _eventPictogram = "ship"
         _eventDisplayName = "Container ship"
     #endif
         super.EEInit();
