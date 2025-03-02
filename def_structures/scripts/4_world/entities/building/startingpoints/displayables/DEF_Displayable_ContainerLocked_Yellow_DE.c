@@ -1,1 +1,0 @@
-class DEF_Displayable_ContainerLocked_Yellow_DE extends DEF_Displayable_Container_1Moh_DE {}

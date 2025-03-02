@@ -68,6 +68,10 @@ class CfgVehicles
     class Land_Ship_Medium2: HouseNoDestruct{};                 //? Sakhal specific
 
     //2.
+    class Land_ContainerLocked_Blue_DE: ContainerLockedBase{};
+    class Land_ContainerLocked_Orange_DE: ContainerLockedBase{};
+    class Land_ContainerLocked_Red_DE: ContainerLockedBase{};
+    class Land_ContainerLocked_Yellow_DE: ContainerLockedBase{};
     class Land_Wreck_sed01_aban1_police: Land_Wreck_hb01_aban1_police{};
 	class Land_wreck_truck01_aban1_firetruck: Land_wreck_truck01_aban1_blue{};
 	class Land_wreck_truck01_aban1_orange: Land_wreck_truck01_aban1_blue{};
@@ -178,7 +182,7 @@ class CfgVehicles
     };
 
     //? Sakhal specific
-    class DEF_Displayable_ContainerLocked_Blue_DE: ContainerLockedBase //!Animated
+    class DEF_Displayable_ContainerLocked_Blue_DE: Land_ContainerLocked_Blue_DE //!Animated
     {
         scope=1;
         storageCategory=4;
@@ -187,7 +191,7 @@ class CfgVehicles
     };
 
     //? Sakhal specific
-    class DEF_Displayable_ContainerLocked_Orange_DE: ContainerLockedBase //!Animated
+    class DEF_Displayable_ContainerLocked_Orange_DE: Land_ContainerLocked_Orange_DE //!Animated
     {
         scope=1;
         storageCategory=4;
@@ -196,7 +200,7 @@ class CfgVehicles
     };
 
     //? Sakhal specific
-    class DEF_Displayable_ContainerLocked_Red_DE: ContainerLockedBase //!Animated
+    class DEF_Displayable_ContainerLocked_Red_DE: Land_ContainerLocked_Red_DE //!Animated
     {
         scope=1;
         storageCategory=4;
@@ -205,7 +209,7 @@ class CfgVehicles
     };
 
     //? Sakhal specific
-    class DEF_Displayable_ContainerLocked_Yellow_DE: ContainerLockedBase //!Animated
+    class DEF_Displayable_ContainerLocked_Yellow_DE: Land_ContainerLocked_Yellow_DE //!Animated
     {
         scope=1;
         storageCategory=4;
