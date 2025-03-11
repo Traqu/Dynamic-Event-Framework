@@ -14,31 +14,31 @@ class AdderallInjectionMdfr : ModifierBase
 	{
 		return false;
 	}
-	
+
 	override void OnReconnect(PlayerBase player)
 	{
 		OnActivate(player);
 	}
-	
+
 	override string GetDebugText()
 	{
 		return (GetMedicineConfig().AdderallInjectionEffectDuration - GetAttachedTime()).ToString();
 	}
-	
+
 	override void OnActivate(PlayerBase player)
 	{
 		player.IncreaseHealingsCount();
 	}
-	
+
 	override void OnDeactivate(PlayerBase player)
 	{
 		player.DecreaseHealingsCount();
 	}
-	
+
 	override bool DeactivateCondition(PlayerBase player)
 	{
 		float attached_time = GetAttachedTime();
-		
+
 		if( attached_time >= GetMedicineConfig().AdderallInjectionEffectDuration )
 		{
 			return true;
@@ -53,6 +53,4 @@ class AdderallInjectionMdfr : ModifierBase
 	{
 		//player.GetStaminaHandler().SetStamina(100);
 	}
-
-	
 };

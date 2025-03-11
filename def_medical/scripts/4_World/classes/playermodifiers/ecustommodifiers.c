@@ -1,4 +1,4 @@
-enum eCustomModifiers : eModifiers 
+enum eCustomModifiers : eModifiers
 {
 	MDF_DEXAMPHETAMINE,
 	MDF_CONSUMPTION_ADDERALL,

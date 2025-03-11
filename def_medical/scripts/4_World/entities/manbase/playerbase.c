@@ -47,4 +47,23 @@ modded class PlayerBase : ManBase
     {
         return m_DexamphetaminePoisoningLevel;
     }
+
+    override bool IsHoldingBreath()     //* For adderall mechanic
+    {
+        ModifiersManager modifiersManager = GetModifiersManager();
+        // Usual behaviour, if null
+        if (!modifiersManager)
+        {
+            return super.IsHoldingBreath();
+        }
+        bool isConsumedAdderallActive = modifiersManager.IsModifierActive(eCustomModifiers.MDF_CONSUMPTION_ADDERALL);
+        bool isInjectedAdderallActive = modifiersManager.IsModifierActive(eCustomModifiers.MDF_INJECTION_ADDERALL);
+        // Usual behaviour, if non of the modifiers is active → we will proceed to stamina depletion on aiming
+        if (!isConsumedAdderallActive && !isInjectedAdderallActive)
+        {
+            return super.IsHoldingBreath();
+        }
+        // If Adderall is active, we will not proceed to stamina depletion
+        return false;
+    }
 };
