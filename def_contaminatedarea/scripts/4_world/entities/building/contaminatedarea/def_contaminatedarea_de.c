@@ -5,7 +5,7 @@ class DEF_ContaminatedArea_DE: House
     override void EEInit()
     {
         super.EEInit();
-        InitializeArea(10, 10, 10);	    //? Radius, posHeight, negHeight
+        InitializeArea(20, 10, 10);	    //? Radius, posHeight, negHeight
     }
 
     override void EEDelete( EntityAI parent )
@@ -20,7 +20,7 @@ class DEF_ContaminatedArea_DE: House
         }
     }
 
-    protected void InitializeArea(int radius, int positiveHeight, int negativeHeight, int innerRings = 1, int innerSpacing = 3, int outerSpacing = 5, int outerRingOffset = 0)
+    protected void InitializeArea(int radius, int positiveHeight, int negativeHeight, int innerRings = 1, int innerSpacing = 45, int outerSpacing = 5, int outerRingOffset = 0)
     {
         SetAreaValues(radius, positiveHeight, negativeHeight, innerRings, innerSpacing, outerSpacing, outerRingOffset);
     }
@@ -52,14 +52,14 @@ class DEF_ContaminatedArea_DE: House
             params.m_ParamAroundPartId = ParticleList.GetParticleID("graphics/particles/contaminated_area_gas_around");
             params.m_ParamTinyPartId = ParticleList.GetParticleID("graphics/particles/contaminated_area_gas_around_tiny");
 
-            contaminatedArea = EffectArea.Cast(GetGame().CreateObjectEx("ContaminatedArea_Static", GetPosition(), ECE_NONE));
+            contaminatedArea = EffectArea.Cast(GetGame().CreateObjectEx("ContaminatedArea_Static", GetPosition(), ECE_NOLIFETIME));
             if (contaminatedArea)
             {
                 contaminatedArea.SetupZoneData(params);
             }
             else
             {
-                Print("[ERROR] Could not created 'ContaminatedArea_Static'!");
+                ErrorEx("[ERROR] Could not create 'DEF_ContaminatedArea_DE'!");
             }
         }
     }

@@ -36,6 +36,6 @@ class CfgVehicles
 		scope=1;
 		storageCategory=4;
 	};
+
 	class DEF_ContaminatedArea_Shipwreck_DE: DEF_ContaminatedArea_DE{};
-	class DEF_ContaminatedArea_ShipwreckSmall_DE: DEF_ContaminatedArea_DE{};
 };

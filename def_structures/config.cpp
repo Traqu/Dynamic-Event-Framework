@@ -1379,7 +1379,7 @@ class CfgSoundshaders
 	{
 		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\shipHorn_2", 1}};
 		volume = 2.00;
-		range = 2200;
+		range = 3000;
 	};
 
     class BoatWaves_SoundShader
