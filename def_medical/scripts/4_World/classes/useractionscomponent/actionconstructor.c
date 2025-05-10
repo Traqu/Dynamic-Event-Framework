@@ -9,5 +9,5 @@ modded class ActionConstructor
         actions.Insert(ActionInjectAdderallTarget);
         actions.Insert(ActionInjectPrimobolanSelf);
         actions.Insert(ActionInjectPrimobolanTarget);
-    }
+    };
 };

@@ -6,7 +6,7 @@ class AdderallAutoInjector_DEF: Inventory_Base
 
         AddAction(ActionInjectAdderallTarget);
         AddAction(ActionInjectAdderallSelf);
-    }
+    };
 
     override void OnApply(PlayerBase player)
 	{
@@ -15,7 +15,8 @@ class AdderallAutoInjector_DEF: Inventory_Base
 		if( player.GetModifiersManager().IsModifierActive( eCustomModifiers.MDF_INJECTION_ADDERALL ) )//effectively resets the timer
 		{
 			player.GetModifiersManager().DeactivateModifier( eCustomModifiers.MDF_INJECTION_ADDERALL );
-		}
+		};
+
 		player.GetModifiersManager().ActivateModifier( eCustomModifiers.MDF_INJECTION_ADDERALL );
-	}
+	};
 };

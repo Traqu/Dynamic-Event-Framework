@@ -6,12 +6,12 @@ class DEF_Displayable_FrozenScientist_DE extends GameLabsLiveIndicator
     {
         CrashSoundSets.RegisterSoundSet("Dummy_Silent_SoundSet");
         return true;
-    }
+    };
 
     override string GetSoundSet()
     {
         return "Dummy_Silent_SoundSet";
-    }
+    };
 
     override void EEInit()
     {
@@ -20,5 +20,5 @@ class DEF_Displayable_FrozenScientist_DE extends GameLabsLiveIndicator
         _eventDisplayName = "Frozen scientist"
     #endif
         super.EEInit();
-    }
+    };
 }

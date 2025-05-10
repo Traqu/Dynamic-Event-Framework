@@ -48,16 +48,16 @@ class CrumbleObsidian extends RecipeBase
 		m_ResultInheritsColor[0]		= -1;			// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
 		m_ResultToInventory[0]			= -2;			// (value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
 		m_ResultReplacesIngredient[0]	= -1;			// (value) == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
-	}
+	};
 
 	//final check for recipe's validity
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)
 	{
 		return true;
-	}
+	};
 
 	//gets called upon recipe's completion
 	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)
 	{
-	}
+	};
 };

@@ -7,5 +7,5 @@ modded class ModifiersManager
 		AddModifier(new AdderallInjectionMdfr);
 		AddModifier(new AdderallComsumptionMdfr);
 		AddModifier(new PrimobolanMdfr);
-	}
+	};
 };

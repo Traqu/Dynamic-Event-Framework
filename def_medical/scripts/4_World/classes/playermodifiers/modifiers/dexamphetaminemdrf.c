@@ -14,24 +14,24 @@ class DexamphetamineMdfr: ModifierBase
         m_TickIntervalActive = DEFAULT_TICK_TIME_ACTIVE;
         m_RegenTime = DEFMedicineConstants.DEXAMPHETAMINE_EFFECT_DURATION;
         DisableActivateCheck();
-    }
+    };
 
     override bool ActivateCondition(PlayerBase player)
     {
         return false;
-    }
+    };
 
     override bool DeactivateCondition(PlayerBase player)
     {
         float attached_time = GetAttachedTime();
         return attached_time > m_RegenTime;
-    }
+    };
 
     override void OnReconnect(PlayerBase player)
     {
         m_FromReconnect = true;
         OnActivate(player);
-    }
+    };
 
     override void OnActivate(PlayerBase player)
     {
@@ -46,18 +46,18 @@ class DexamphetamineMdfr: ModifierBase
             if(player.GetCurrentPoisoningLevel() != 0)
             {
                m_OverdoseManager.ApplyOverdoseEffects(player, player.GetPoisoningSeverityLevel());
-            }
-        }
+            };
+        };
         
         player.InduceDexamphetaminePoisoning(DEFMedicineConstants.DEXAMPHETAMINE_POISONING_DOSAGE);
         
         m_FromReconnect = false;
-    }
+    };
 
     override void OnDeactivate(PlayerBase player)
     {
         player.DecreaseHealingsCount();
-    }
+    };
 
     override void OnTick(PlayerBase player, float deltaT)
     {
@@ -69,19 +69,19 @@ class DexamphetamineMdfr: ModifierBase
                 if (modifiersManager)
                 {
                     modifiersManager.DeactivateModifier(m_ID);
-                }
+                };
                 return;
-            }
-        }
+            };
+        };
         
         if (player.GetHealth("", "Health") < player.GetMaxHealth("", "Health"))
         {
             ForceDisplayAscendingHealthTendency(player, 2);
-        }
+        };
 
         float health_buff = GetMedicineConfig().HealthRegenMultiplier * PlayerConstants.HEALTH_REGEN_MAX * deltaT;
         player.AddHealth("", "Health", health_buff);
-    }
+    };
 
     void ForceDisplayAscendingHealthTendency(PlayerBase player, int tendency)
     {
@@ -89,8 +89,8 @@ class DexamphetamineMdfr: ModifierBase
         if (dis_elm)
         {
             dis_elm.SetTendency(tendency);
-        }
-    }
+        };
+    };
 
     void ApplyComplementaryModifiers(PlayerBase player)
     {
@@ -100,6 +100,6 @@ class DexamphetamineMdfr: ModifierBase
         {
             modifiersManager.ActivateModifier(eModifiers.MDF_MORPHINE);
             modifiersManager.ActivateModifier(eModifiers.MDF_EPINEPHRINE);
-        }
-    }
-};
+        };
+    };
+};;

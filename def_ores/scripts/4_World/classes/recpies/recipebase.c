@@ -4,5 +4,5 @@
 //     {
 //         super.RecipeBase();
 //     	m_RecipeUID = DayZPlayerConstants.CMD_ACTIONFB_MINEROCK;
-//     }
-// }
+//     };
+// };

@@ -8,32 +8,32 @@ class AdderallComsumptionMdfr : ModifierBase
 		m_TickIntervalInactive 	= DEFAULT_TICK_TIME_INACTIVE;
 		m_TickIntervalActive 	= 1;
 		DisableActivateCheck();
-	}
+	};
 
 	override bool ActivateCondition(PlayerBase player)
 	{
 		return false;
-	}
+	};
 
 	override void OnReconnect(PlayerBase player)
 	{
 		OnActivate(player);
-	}
+	};
 
 	override string GetDebugText()
 	{
 		return (GetMedicineConfig().AdderallConsumptionEffectDuration - GetAttachedTime()).ToString();
-	}
+	};
 
 	override void OnActivate(PlayerBase player)
 	{
 		player.IncreaseHealingsCount();
-	}
+	};
 
 	override void OnDeactivate(PlayerBase player)
 	{
 		player.DecreaseHealingsCount();
-	}
+	};
 
 	override bool DeactivateCondition(PlayerBase player)
 	{
@@ -46,11 +46,11 @@ class AdderallComsumptionMdfr : ModifierBase
 		else
 		{
 			return false;
-		}
-	}
+		};
+	};
 
 	override void OnTick(PlayerBase player, float deltaT)
 	{
 		//player.GetStaminaHandler().SetStamina(100);
-	}
-};
+	};
+};;

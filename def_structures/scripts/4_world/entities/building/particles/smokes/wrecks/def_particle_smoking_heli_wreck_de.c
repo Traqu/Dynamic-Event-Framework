@@ -7,8 +7,8 @@ class DEF_PARTICLE_SMOKING_HELI_WRECK_DE extends House
         if ( !GetGame().IsDedicatedServer() )
         {
             m_Ptc = ParticleManager.GetInstance().PlayOnObject(ParticleList.SMOKING_HELI_WRECK, this, Vector(0.0, 0.0, 0.0));
-        }
-    }
+        };
+    };
 
     override void EEDelete(EntityAI parent)
     {
@@ -16,6 +16,6 @@ class DEF_PARTICLE_SMOKING_HELI_WRECK_DE extends House
         {
             if ( m_Ptc )
                 m_Ptc.Stop();
-        }
-    }
+        };
+    };
 };

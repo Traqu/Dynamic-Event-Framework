@@ -9,9 +9,9 @@ class DEF_Land_Boat_Small9_DE extends House
             if(!m_Sfx)
             {
                 PlaySoundSetLoop(m_Sfx, "BoatCreakingDeck_SoundSet", 0.5, 0.5);
-            }
-        }
-    }
+            };
+        };
+    };
 
     override void EEDelete(EntityAI parent)
     {
@@ -20,7 +20,7 @@ class DEF_Land_Boat_Small9_DE extends House
             if (m_Sfx)
             {
                 StopSoundSet(m_Sfx);
-            }
-        }
-    }
+            };
+        };
+    };
 };

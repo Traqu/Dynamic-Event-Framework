@@ -11,9 +11,9 @@ class DynamicEventSound extends DynamicEventObject
 			if ( m_SoundSet )
 			{
 				PlaySoundSetLoop( m_AmbientSoundLoop, m_SoundSet, 0, 0 );
-			}
-		}
-	}
+			};
+		};
+	};
 
 	override void EEDelete(EntityAI parent)
 	{
@@ -22,7 +22,7 @@ class DynamicEventSound extends DynamicEventObject
 			if ( m_AmbientSoundLoop )
 			{
 				SEffectManager.DestroyEffect(m_AmbientSoundLoop);
-			}
-		}
-	}
+			};
+		};
+	};
 };

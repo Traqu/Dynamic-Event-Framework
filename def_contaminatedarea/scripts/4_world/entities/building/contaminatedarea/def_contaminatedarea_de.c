@@ -6,7 +6,7 @@ class DEF_ContaminatedArea_DE: House
     {
         super.EEInit();
         InitializeArea(20, 10, 10);	    //? Radius, posHeight, negHeight
-    }
+    };
 
     override void EEDelete( EntityAI parent )
     {
@@ -17,13 +17,13 @@ class DEF_ContaminatedArea_DE: House
         if ( parent )
         {
     		super.EEDelete( parent );
-        }
-    }
+        };
+    };
 
     protected void InitializeArea(int radius, int positiveHeight, int negativeHeight, int innerRings = 1, int innerSpacing = 45, int outerSpacing = 5, int outerRingOffset = 0)
     {
         SetAreaValues(radius, positiveHeight, negativeHeight, innerRings, innerSpacing, outerSpacing, outerRingOffset);
-    }
+    };
 
     private void SetAreaValues(int radius, int positiveHeight, int negativeHeight, int innerRings, int innerSpacing, int outerSpacing, int outerRingOffset)
     {
@@ -33,7 +33,7 @@ class DEF_ContaminatedArea_DE: House
             {
                 contaminatedArea.Delete();
                 contaminatedArea = null;
-            }
+            };
 
             EffectAreaParams params = new EffectAreaParams();
             params.m_ParamName = "DynamicEventZone";
@@ -60,12 +60,12 @@ class DEF_ContaminatedArea_DE: House
             else
             {
                 ErrorEx("[ERROR] Could not create 'DEF_ContaminatedArea_DE'!");
-            }
-        }
-    }
+            };
+        };
+    };
 
     protected void EEInit_SkipThis()
     {
         super.EEInit();
-    }
-}
+    };
+};

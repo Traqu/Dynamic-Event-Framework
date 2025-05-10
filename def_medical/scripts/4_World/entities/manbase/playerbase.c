@@ -7,7 +7,7 @@ modded class PlayerBase : ManBase
         super.OnTick();
 
         DecreaseDexamphetaminePoisoningLevel(DEFMedicineConstants.DEXAMPHETAMINE_POISONING_HEAL_RATE);
-    }
+    };
 
     void DecreaseDexamphetaminePoisoningLevel(float detoxificationRate)
     {
@@ -16,13 +16,13 @@ modded class PlayerBase : ManBase
         if (m_DexamphetaminePoisoningLevel < 0)
         {
             m_DexamphetaminePoisoningLevel = 0;
-        }
-    }
+        };
+    };
 
     void InduceDexamphetaminePoisoning(float poisoningDose)
     {
         m_DexamphetaminePoisoningLevel += poisoningDose;
-    }
+    };
 
     eDexamphetaminePoisoningSeverityLevel GetPoisoningSeverityLevel()
     {
@@ -40,13 +40,13 @@ modded class PlayerBase : ManBase
         {
           //  Print("[DEF - MEDICINE] Player " + GetCachedName() + " reached " + eDexamphetaminePoisoningSeverityLevel.DPSL_LOW + "st DPSL at: "+ m_DexamphetaminePoisoningLevel);
             return eDexamphetaminePoisoningSeverityLevel.DPSL_LOW;
-        }
-    }
+        };
+    };
 
     float GetCurrentPoisoningLevel()
     {
         return m_DexamphetaminePoisoningLevel;
-    }
+    };
 
     override bool IsHoldingBreath()     //* For adderall mechanic
     {
@@ -55,15 +55,16 @@ modded class PlayerBase : ManBase
         if (!modifiersManager)
         {
             return super.IsHoldingBreath();
-        }
+        };
+
         bool isConsumedAdderallActive = modifiersManager.IsModifierActive(eCustomModifiers.MDF_CONSUMPTION_ADDERALL);
         bool isInjectedAdderallActive = modifiersManager.IsModifierActive(eCustomModifiers.MDF_INJECTION_ADDERALL);
         // Usual behaviour, if non of the modifiers is active → we will proceed to stamina depletion on aiming
         if (!isConsumedAdderallActive && !isInjectedAdderallActive)
         {
             return super.IsHoldingBreath();
-        }
+        };
         // If Adderall is active, we will not proceed to stamina depletion
         return false;
-    }
+    };
 };

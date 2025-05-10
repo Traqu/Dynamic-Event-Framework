@@ -26,20 +26,19 @@ modded class StaminaHandler
                        else
                        {
                         KeepCfgGameplayStaminaCap();
-                       }
+                       };
                     }
                     else    // * otherwise vanilla code will be run
                     {
                         KeepCfgGameplayStaminaCap();
-                    }
+                    };
                 }
-
 				else
 				{
 					m_StaminaCap = CfgGameplayHandler.GetStaminaMax();
-				}
-			}
-			
+				};
+			};
+
 			// Calculates stamina gain/loss based on movement and load
 			m_Player.GetMovementState(m_State);
 
@@ -62,10 +61,10 @@ modded class StaminaHandler
 					if (!m_IsInCooldown)
 					{
 						m_StaminaDelta = GameConstants.STAMINA_GAIN_IDLE_PER_SEC;
-					}
+					};
 					break;
-			}
-			
+			};
+
 			//Sets current stamina & stores + syncs data with client
 			float temp = m_StaminaDelta * deltaT;
 			if (temp < 0)
@@ -75,8 +74,8 @@ modded class StaminaHandler
 			else
 			{
 				temp *= m_StaminaRecoveryMultiplier;
-			}
-			
+			};
+
 			m_Stamina = Math.Max(0, Math.Min((m_Stamina + temp), m_StaminaCap));
 			m_Stamina = m_Stamina - m_StaminaDepletion;
 
@@ -84,13 +83,13 @@ modded class StaminaHandler
 			{
 				m_Player.GetStatStamina().Set(m_Stamina);
 				m_Time += deltaT;
-				
+
 				if (m_Time >= GameConstants.STAMINA_SYNC_RATE)
 				{
 					m_Time = 0;
 					SetStamina(m_Stamina);
-				}
-			}
+				};
+			};
 
 			#ifndef SERVER
 			m_Player.SetStamina(m_StaminaSynced, m_StaminaCap);
@@ -101,34 +100,34 @@ modded class StaminaHandler
 
 			m_StaminaDelta = 0;
 			m_StaminaDepletion = 0; // resets depletion modifier
-			
-		}
-	}
+
+		};
+	};
 
     bool IsPrimobolanActive()
     {
         ModifiersManager modifiersManager = m_Player.GetModifiersManager();
         return modifiersManager.IsModifierActive(eCustomModifiers.MDF_PRIMOBOLAN);
-    }
+    };
 
     float CalculateNewStaminaCap(float minCap)
     {
         return Math.Max(
             CfgGameplayHandler.GetStaminaMax() - (((m_PlayerLoad - CfgGameplayHandler.GetStaminaWeightLimitThreshold()) / GameConstants.STAMINA_KG_TO_GRAMS) * CfgGameplayHandler.GetStaminaKgToStaminaPercentPenalty()), minCap);
-    }
+    };
 
     void SetPrimobolanStaminaCap()
     {
         m_StaminaCap = CalculateNewStaminaCap(GetMedicineConfig().PrimobolanEffectStrength);
-    }
+    };
 
     void KeepCfgGameplayStaminaCap()
     {
         m_StaminaCap = CalculateNewStaminaCap(CfgGameplayHandler.GetStaminaMinCap());
-    }
+    };
 
     bool IsMinStaminaCapGreaterThanPrimobolanCap()
     {
         return CfgGameplayHandler.GetStaminaMinCap() > GetMedicineConfig().PrimobolanEffectStrength;
-    }
-}
+    };
+};

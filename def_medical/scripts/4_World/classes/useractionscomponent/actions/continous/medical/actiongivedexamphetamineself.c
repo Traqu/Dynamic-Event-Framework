@@ -1,7 +1,7 @@
 class ActionGiveDexamphetamineSelf : ActionGiveSalineSelf
 {
     private ref OverdoseManager m_OverdoseManager;
- 
+
     void ActionGiveDexamphetamineSelf()
     {
         m_OverdoseManager = new OverdoseManager();
@@ -10,12 +10,12 @@ class ActionGiveDexamphetamineSelf : ActionGiveSalineSelf
         m_FullBody = true;
         m_StanceMask = DayZPlayerConstants.STANCEMASK_ERECT | DayZPlayerConstants.STANCEMASK_CROUCH;
         m_Text = "#STR_give_dexamphetamine_self";
-    }
+    };
 
     override void OnFinishProgressServer(ActionData action_data)
     {
         action_data.m_MainItem.TransferModifiers(action_data.m_Player);
-        Param1<float> nacdata = Param1<float>.Cast(action_data.m_ActionComponent.GetACData());		
+        Param1<float> nacdata = Param1<float>.Cast(action_data.m_ActionComponent.GetACData());
         float delta = nacdata.param1;
 
         ModifiersManager modifiersManager = action_data.m_Player.GetModifiersManager();
@@ -29,8 +29,8 @@ class ActionGiveDexamphetamineSelf : ActionGiveSalineSelf
         else
         {
         modifiersManager.ActivateModifier(eCustomModifiers.MDF_DEXAMPHETAMINE);
-        }
+        };
 
         action_data.m_MainItem.Delete();
-    }
+    };
 };

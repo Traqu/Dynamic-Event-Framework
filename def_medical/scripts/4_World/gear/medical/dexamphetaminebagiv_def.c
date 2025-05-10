@@ -6,5 +6,5 @@ class DexamphetamineBagIV_DEF: Inventory_Base
 
         AddAction(ActionGiveDexamphetamineTarget);
         AddAction(ActionGiveDexamphetamineSelf);
-    }
+    };
 };

@@ -4,7 +4,7 @@ modded class MissionGameplay
 	{
 		GetRPCManager().AddRPC("DEF_MEDICINE", "ClientStoreMedicineConfig", this, SingeplayerExecutionType.Client);
 		GetRPCManager().SendRPC("DEF_MEDICINE", "GetMedicineServerConfig");
-	}
+	};
 
 	void ClientStoreMedicineConfig(CallType type, ParamsReadContext ctx, PlayerIdentity sender, Object target)
 	{
@@ -16,5 +16,5 @@ modded class MissionGameplay
 			Print("[DynamicEventFramework] Received medicine config");
 			g_MedicineConfig = data.param1;
 		}
-	}
+	};
 };

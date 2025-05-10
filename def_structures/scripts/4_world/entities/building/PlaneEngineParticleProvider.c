@@ -7,8 +7,8 @@ class PlaneEngineParticleProvider extends House
 		if ( !GetGame().IsDedicatedServer() )
 		{
 			m_SmokeTrail = ParticleManager.GetInstance().PlayOnObject(ParticleList.SMOKING_HELI_WRECK, this, Vector(5.15, -2, -3.63));
-		}
-	}
+		};
+	};
 
     override void EEDelete(EntityAI parent)
 	{
@@ -16,6 +16,6 @@ class PlaneEngineParticleProvider extends House
 		{
 			if ( m_SmokeTrail )
 				m_SmokeTrail.Stop();
-		}
-	}
-}
+		};
+	};
+};

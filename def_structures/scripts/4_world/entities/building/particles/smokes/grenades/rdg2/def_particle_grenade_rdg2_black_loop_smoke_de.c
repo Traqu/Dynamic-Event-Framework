@@ -7,8 +7,8 @@ class DEF_PARTICLE_GRENADE_RDG2_BLACK_LOOP_DE extends House
         if ( !GetGame().IsDedicatedServer() )
         {
             m_Ptc = ParticleManager.GetInstance().PlayOnObject(ParticleList.GRENADE_RDG2_BLACK_LOOP, this, Vector(0.0, 0.0, 0.0));
-        }
-    }
+        };
+    };
 
     override void EEDelete(EntityAI parent)
     {
@@ -16,6 +16,6 @@ class DEF_PARTICLE_GRENADE_RDG2_BLACK_LOOP_DE extends House
         {
             if ( m_Ptc )
                 m_Ptc.Stop();
-        }
-    }
+        };
+    };
 };

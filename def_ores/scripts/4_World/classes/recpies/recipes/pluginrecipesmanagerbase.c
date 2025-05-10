@@ -5,5 +5,5 @@ modded class PluginRecipesManagerBase
 		super.RegisterRecipies();
 		RegisterRecipe(new ObsidianCraftNails);
 		RegisterRecipe(new CrumbleObsidian);
-	}
-}
+	};
+};

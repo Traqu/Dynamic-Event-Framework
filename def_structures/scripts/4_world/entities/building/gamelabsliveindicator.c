@@ -18,7 +18,7 @@ class GameLabsLiveIndicator extends CrashBase
         Print("[DEF] Creating GameLabs event for " + GetType() + " object as \"" + _eventDisplayName + "\" (icon: " + _eventPictogram + ")");
         _registeredInstance = new _Event(_eventDisplayName, _eventPictogram, this);
         GetGameLabs().RegisterEvent(_registeredInstance);
-    }
+    };
 
     override void EEDelete(EntityAI parent)
     {
@@ -30,8 +30,8 @@ class GameLabsLiveIndicator extends CrashBase
         {
             Print("[DEF] Removing GameLabs event for " + GetType());
             GetGameLabs().RemoveEvent(_registeredInstance);
-        }
-    }
+        };
+    };
 
     //*  private string GetEventPictogram()
     //*  {

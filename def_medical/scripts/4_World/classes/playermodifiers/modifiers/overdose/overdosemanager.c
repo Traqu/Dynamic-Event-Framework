@@ -22,8 +22,8 @@ class OverdoseManager
             default:
                 Print("[DEF] Unknown Dexamphetamine poisoning level: " + poisoningLevel);
                 break;
-        }
-    }
+        };
+    };
 
     void ApplyOverdoseEffectsLOW(PlayerBase player)
     {
@@ -31,21 +31,21 @@ class OverdoseManager
         player.GetSymptomManager().QueueUpPrimarySymptom(SymptomIDs.SYMPTOM_VOMIT);
         player.GetStatWater().Add(-1000);
         player.GetStatEnergy().Add(-800);
-    }
+    };
 
     void ApplyOverdoseEffectsMEDIUM(PlayerBase player)
     {
         ApplyOverdoseEffectsLOW(player);
         player.AddHealth("", "Blood", -1000);
         player.AddHealth("", "Health", -40);
-    }
+    };
 
     void ApplyOverdoseEffectsHIGH(PlayerBase player)
     {
         player.SetHealth("", "Health", 11);
         ApplyOverdoseEffectsLOW(player);
         GetGame().GetCallQueue(CALL_CATEGORY_SYSTEM).CallLater(DelayedKill, 5555, false);
-    }
+    };
 
     void DelayedKill()
     {
@@ -53,5 +53,5 @@ class OverdoseManager
         {
             m_Player.SetHealth("", "Health", 0);
         }
-    }
+    };
 };
