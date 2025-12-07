@@ -49,6 +49,7 @@ class CfgVehicles
     class ContainerLockedBase: HouseNoDestruct{};
     class Land_Container_1Mo: HouseNoDestruct{};
     class Land_Container_1Moh: HouseNoDestruct{};
+    class Land_Wreck_S1023_Blue : HouseNoDestruct{};
 
 
     class Land_Misc_Toilet_Mobile: HouseNoDestruct{};
@@ -75,6 +76,7 @@ class CfgVehicles
     class Land_Wreck_sed01_aban1_police: Land_Wreck_hb01_aban1_police{};
 	class Land_wreck_truck01_aban1_firetruck: Land_wreck_truck01_aban1_blue{};
 	class Land_wreck_truck01_aban1_orange: Land_wreck_truck01_aban1_blue{};
+    class Land_Wreck_S1023_Medic_Beige : Land_Wreck_S1023_Blue{};
 
     //3.
     class Land_Wreck_hb01_aban1_green_DE: Land_Wreck_Car_TwoDoors{};
@@ -91,6 +93,7 @@ class CfgVehicles
     class Land_wreck_truck01_aban1_orange_DE: Land_wreck_truck01_aban1_orange{};
 	class Land_wreck_truck01_aban2_firetruck: Land_wreck_truck01_aban1_firetruck{};
     class Land_wreck_truck01_aban2_green_DE: Land_wreck_truck01_aban2_blue{};
+    class Land_Wreck_S1023_Medic_Beige_DE : Land_Wreck_S1023_Medic_Beige{};
 
     ///4.
     class Land_wreck_truck01_aban2_firetruck_DE: Land_wreck_truck01_aban2_firetruck{};
@@ -121,6 +124,12 @@ class CfgVehicles
     {
         eventPictogram = "campfire";
         displayedName = "Survivor camp";
+    };
+
+    class DEF__Starting_Point_Industrial_DE : DEF__Starting_Point_Base_DE
+    {
+        eventPictogram = "truck-container";
+        displayedName = "Industrial event";
     };
 
     class DEF__Starting_Point_MedicalConvoy_DE : DEF__Starting_Point_Base_DE
@@ -173,6 +182,12 @@ class CfgVehicles
 
     //! Displayables ↓
     //? Sakhal specific
+    class DEF_Displayable_Land_Wreck_S1023_Medic_Beige_DE: Land_Wreck_S1023_Medic_Beige_DE
+    {
+        scope=1;
+        storageCategory=4; //Kept to stay consistent
+    };
+
     class DEF_Displayable_Container_1Moh_DE: Land_Container_1Moh //!Animated
     {
         scope=1;
@@ -1010,17 +1025,20 @@ class CfgVehicles
 
     class DEF_Wreck_AC130J_DE: DynamicEventObject
     {
-        model="DZ\structures\wrecks\Aircraft\Wreck_C130J.p3d";
+        model="DynamicEventFramework\def_structures\data\watermark\J.p3d";
+        // model="DZ\structures\wrecks\Aircraft\Wreck_C130J.p3d";
     };
 
     class DEF_Wreck_AC130J_2_DE: DynamicEventObject
     {
-        model="DZ\structures\wrecks\Aircraft\Wreck_C130J_2.p3d";
+        model="DynamicEventFramework\def_structures\data\watermark\J2.p3d";
+        // model="DZ\structures\wrecks\Aircraft\Wreck_C130J_2.p3d";
     };
 
     class DEF_Wreck_AC130J_Cargo_DE: DynamicEventObject
     {
-        model="DZ\structures\wrecks\Aircraft\Wreck_C130J_Cargo.p3d";
+        model="DynamicEventFramework\def_structures\data\watermark\JCargo.p3d";
+        // model="DZ\structures\wrecks\Aircraft\Wreck_C130J_Cargo.p3d";
     };
 
     //class DEF_Wreck_Ambulance_New_DE: DynamicEventObject
@@ -1206,12 +1224,50 @@ class CfgVehicles
         storageCategory=4;
     };
 
+    class DEF_Land_Wreck_S1023_Medic_Beige_DE: Land_Wreck_S1023_Medic_Beige_DE  //!Animated //This class is no different than vanilla one, just added for convenience of navigation → if you want to display it on CF map, use the displayable variant
+    {
+        scope=1;
+        storageCategory=4; //Kept to stay consistent
+    };
+
     class DEF_Wreck_Truck01_Aban2_Green_DE: Land_wreck_truck01_aban2_blue  //!Animated
-   {
+    {
         scope=1;
         storageCategory=4;
 		model="\DZ\structures\Wrecks\Vehicles\wreck_truck01_aban2_green.p3d";
     };
+
+//? INDUSTRIAL LOOT ↓
+
+    class DEF_Wreck_Truck01_Aban1_Orange_INDUSTRIAL_DE: DEF_Wreck_Truck01_Aban1_Orange_DE{};    //!Animated    INDUSTRIAL PROTO
+    class DEF_Wreck_Truck01_Aban1_Green_INDUSTRIAL_DE: DEF_Wreck_Truck01_Aban2_Green_DE{};      //!Animated    INDUSTRIAL PROTO
+
+    class DEF_StaticObj_Wreck_Bulldozer_INDUSTRIAL_DE: DynamicEventObject
+    {
+        model="DZ\structures\Wrecks\Vehicles\Wreck_Bulldozer.p3d";
+    };
+
+    class DEF_StaticObj_Wreck_Digger_INDUSTRIAL_DE: DynamicEventObject
+    {
+        model="DZ\structures\Wrecks\Vehicles\Wreck_Digger.p3d";
+    };
+
+    class DEF_StaticObj_Wreck_Trailer_Flat_INDUSTRIAL_DE: DynamicEventObject
+    {
+        model="DZ\structures\Wrecks\Vehicles\Wreck_Trailer_Flat.p3d";
+    };
+
+    class DEF_Land_Wreck_Mining_Excavator_INDUSTRIAL_DE: DynamicEventObject
+    {
+        model="\DZ\structures_bliss\Wrecks\Vehicles\Wreck_Mining_Excavator.p3d";
+    };
+
+    class DEF_Land_Wreck_Mining_HaulTruck_INDUSTRIAL_DE: DynamicEventObject
+    {
+        model="\DZ\structures_bliss\Wrecks\Vehicles\Wreck_Mining_HaulTruck.p3d";
+    };
+
+//? INDUSTRIAL LOOT ↑
 
     class DEF_Land_Ship_Big_FrontA_DE : DynamicEventObject
     {
