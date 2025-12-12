@@ -4,13 +4,13 @@ class DEF__Starting_Point_MilitaryTents_DE extends GameLabsLiveIndicator
 
     static bool SoundInit()
     {
-        CrashSoundSets.RegisterSoundSet("Dummy_Silent_SoundSet");
+        CrashSoundSets.RegisterSoundSet("DEF_Dummy_Silent_SoundSet");
         return true;
     };
 
     override string GetSoundSet()
     {
-        return "Dummy_Silent_SoundSet";
+        return "DEF_Dummy_Silent_SoundSet";
     };
 
     override void EEInit()

@@ -1,1 +1,1 @@
-class DynamicEventObject extends House {};
+class DEF_DynamicEventObject extends House {}

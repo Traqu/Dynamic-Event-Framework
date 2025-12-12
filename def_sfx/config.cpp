@@ -7,6 +7,7 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
+
 class CfgMods
 {
 	class DynamicEventFramework_SFX
@@ -20,7 +21,7 @@ class CfgMods
 			class worldScriptModule
 			{
 				value = "";
-				files[] = {"DynamicEventFramework\def_sfx\scripts\4_world"};
+				files[] = {"DynamicEventFramework/def_sfx/scripts/4_world"};
 			};
 		};
 	};
@@ -28,9 +29,9 @@ class CfgMods
 
 class CfgVehicles
 {
-	class DynamicEventObject;
+	class DEF_DynamicEventObject;
 
-	class DynamicEventSound: DynamicEventObject	{};
+	class DynamicEventSound: DEF_DynamicEventObject	{};
 
 	class DEF_SFX_RadioChatter_DE: DynamicEventSound {};
 };
@@ -47,7 +48,7 @@ class CfgSoundShaders
 {
 	class DEF_SFX_RadioChatter_DE_SoundShader
 	{
-		samples[] = {{"DynamicEventFramework\def_sfx\data\sounds\environment\ambient\def_sfx/data/sounds/environment/ambient/radio-chatter-relief-needed", 1}};
+		samples[] = {{"DynamicEventFramework\def_sfx\data\sounds\environment\ambient\radio-chatter-relief-needed", 1}};
 		range = 50;
 		volume = 1;
 		rangeCurve[] = {{0,1},{15,0.8},{20,0.75},{30,0.5},{40,0.25},{50,0.1}};

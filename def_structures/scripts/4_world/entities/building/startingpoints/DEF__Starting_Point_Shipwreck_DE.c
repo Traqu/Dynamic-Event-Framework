@@ -4,13 +4,13 @@ class DEF__Starting_Point_Shipwreck_DE extends GameLabsLiveIndicator
 
     static bool SoundInit()
     {
-        CrashSoundSets.RegisterSoundSet("Shipwreck_SoundSet");
+        CrashSoundSets.RegisterSoundSet("DEF_Shipwreck_SoundSet");
         return true;
     };
 
     override string GetSoundSet()
     {
-        return "Shipwreck_SoundSet";
+        return "DEF_Shipwreck_SoundSet";
     };
 
     override void EEInit()

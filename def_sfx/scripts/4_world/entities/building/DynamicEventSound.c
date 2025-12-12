@@ -1,4 +1,4 @@
-class DynamicEventSound extends DynamicEventObject
+class DynamicEventSound extends DEF_DynamicEventObject
 {
 	EffectSound m_AmbientSoundLoop;
 

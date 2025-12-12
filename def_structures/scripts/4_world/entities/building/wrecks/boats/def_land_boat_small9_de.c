@@ -8,7 +8,7 @@ class DEF_Land_Boat_Small9_DE extends House
         {
             if(!m_Sfx)
             {
-                PlaySoundSetLoop(m_Sfx, "BoatCreakingDeck_SoundSet", 0.5, 0.5);
+                PlaySoundSetLoop(m_Sfx, "DEF_BoatCreakingDeck_SoundSet", 0.5, 0.5);
             };
         };
     };

@@ -5,13 +5,13 @@ class DEF_Displayable_Land_Wreck_S1023_Medic_Beige_DE extends GameLabsLiveIndica
 
     static bool SoundInit()
     {
-        CrashSoundSets.RegisterSoundSet("Dummy_Silent_SoundSet");
+        CrashSoundSets.RegisterSoundSet("DEF_Dummy_Silent_SoundSet");
         return true;
     };
 
     override string GetSoundSet()
     {
-        return "Dummy_Silent_SoundSet";
+        return "DEF_Dummy_Silent_SoundSet";
     };
 
     override void EEInit()
