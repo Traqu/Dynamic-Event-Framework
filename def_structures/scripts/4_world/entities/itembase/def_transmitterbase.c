@@ -2,27 +2,27 @@ modded class TransmitterBase //extends ItemTransmitter
 {
     bool debug = false;
 
-    ref Timer checkForCampsTimer;
-    static ref array<vector> s_ActiveDynamicCamps = new array<vector>();  //all radios should have same knowledge
-    string SOUND_CAMP_DETECTED = "DEF_RadioNoise_SoundSet_";
+    ref Timer checkForRadiowaveTransmittersTimer;
+    static ref array<vector> s_ActiveDynamicRadiowaveTransmitters = new array<vector>();  //all radios should have same knowledge
+    string SOUNDSET__RADIOWAVE_TRANSMITTER_DETECTED = "DEF_RadioNoise_SoundSet_";
 	protected EffectSound m_DetectionSound;
 
     void TransmitterBase()
     {
-        checkForCampsTimer = new Timer();
+        checkForRadiowaveTransmittersTimer = new Timer();
     }
     
 	override void OnWorkStart()
 	{
 		super.OnWorkStart();
-        DEF_DetectDynamicCamp_PlaySoundNoise_Start();
+        DEF_DetectDynamicRadiowaveTransmitter_PlaySoundNoise_Start();
 
         if (debug)
         {
-            Print("[DEF DEBUG] : LISTING ALL CAMPS");
-            foreach (vector campPos : TransmitterBase.s_ActiveDynamicCamps)
+            Print("[DEF DEBUG] : LISTING ALL RADIOWAVE_TRANSMITTERS");
+            foreach (vector radiowaveTransmitterPos : TransmitterBase.s_ActiveDynamicRadiowaveTransmitters)
             {
-                Print(campPos);
+                Print(radiowaveTransmitterPos);
             }
         }
         
@@ -31,28 +31,29 @@ modded class TransmitterBase //extends ItemTransmitter
 	override void OnWorkStop()
 	{
 		super.OnWorkStop();
-        DEF_DetectDynamicCamp_PlaySoundNoise_Stop();
+        DEF_DetectDynamicRadiowaveTransmitter_PlaySoundNoise_Stop();
 	}
     
-	protected void DEF_DetectDynamicCamp_PlaySoundNoise_Start()
+	protected void DEF_DetectDynamicRadiowaveTransmitter_PlaySoundNoise_Start()
     {
-        int checkForCampsTimer_secondsInterval = GetGame().ServerConfigGetInt("checkForCampsTimer_secondsInterval");
-        if (checkForCampsTimer_secondsInterval == 0)
+        int checkForRadiowaveTransmittersTimer_secondsInterval = GetGame().ServerConfigGetInt("checkForRadiowaveTransmittersTimer_secondsInterval");
+        if (checkForRadiowaveTransmittersTimer_secondsInterval == 0)
         {
-           checkForCampsTimer_secondsInterval = 90;
+           checkForRadiowaveTransmittersTimer_secondsInterval = 90;
         }
-        checkForCampsTimer.Run(checkForCampsTimer_secondsInterval, this, "DEF_CheckForCamps", NULL, true);
+
+        checkForRadiowaveTransmittersTimer.Run(checkForRadiowaveTransmittersTimer_secondsInterval, this, "DEF_CheckForRadiowaveTransmitters", NULL, true);
         
         if (debug)
         {
-            Print("[DEF DEBUG] - checkForCampsTimer_secondsInterval = " + checkForCampsTimer_secondsInterval)
+            Print("[DEF DEBUG] - checkForRadiowaveTransmittersTimer_secondsInterval = " + checkForRadiowaveTransmittersTimer_secondsInterval)
         }
     }
 
-	protected void DEF_DetectDynamicCamp_PlaySoundNoise_Stop()
+	protected void DEF_DetectDynamicRadiowaveTransmitter_PlaySoundNoise_Stop()
 	{
         StopSoundSet( m_DetectionSound );
-        checkForCampsTimer.Stop();
+        checkForRadiowaveTransmittersTimer.Stop();
 	}
 
     static bool DEF_IsVectorEqual(vector a, vector b, float tolerance = 5)
@@ -74,32 +75,32 @@ modded class TransmitterBase //extends ItemTransmitter
         return false;
     }
 
-    static void DEF_AddCampToList(vector position)
+    static void DEF_AddTransmitterToList(vector position)
     {
         if(!DEF_IsVectorZero(position))
         {
-            for (int i = 0; i < s_ActiveDynamicCamps.Count(); i++)
+            for (int i = 0; i < s_ActiveDynamicRadiowaveTransmitters.Count(); i++)
             {
-                if (s_ActiveDynamicCamps[i] == position)    //uniqueness check
+                if (s_ActiveDynamicRadiowaveTransmitters[i] == position)    //uniqueness check
                     return;
             }
 
-            TransmitterBase.s_ActiveDynamicCamps.Insert(position);
+            TransmitterBase.s_ActiveDynamicRadiowaveTransmitters.Insert(position);
             if (debug)
             {
-                Print("[DEF DEBUG] - Added camp to list at: " + position);
+                Print("[DEF DEBUG] - Added radiowaveTransmitter to list at: " + position);
             }
         }
     }
 
-    static void DEF_RemoveCampFromList(vector position)
+    static void DEF_RemoveTransmitterFromList(vector position)
     {
         if(!DEF_IsVectorZero(position))
         {
             int index = -1;
-            for (int i = 0; i < s_ActiveDynamicCamps.Count(); i++)
+            for (int i = 0; i < s_ActiveDynamicRadiowaveTransmitters.Count(); i++)
             {
-                if (DEF_IsVectorEqual(s_ActiveDynamicCamps[i], position))
+                if (DEF_IsVectorEqual(s_ActiveDynamicRadiowaveTransmitters[i], position))
                 {
                     index = i;
                     break;
@@ -108,24 +109,24 @@ modded class TransmitterBase //extends ItemTransmitter
 
             if (index != -1)
             {
-                s_ActiveDynamicCamps.Remove(index);
+                s_ActiveDynamicRadiowaveTransmitters.Remove(index);
 
                 if (debug)
                 {
-                    Print("[DEF DEBUG] - Removed camp at: " + position);
+                    Print("[DEF DEBUG] - Removed radiowaveTransmitter at: " + position);
                 }
             }
             else
             {
                 if (debug)
                 {
-                    Print("[DEF DEBUG] - No camp found to remove at: " + position);
+                    Print("[DEF DEBUG] - No radiowaveTransmitter found to remove at: " + position);
                 }
             }
         }
     }
 
-    protected void DEF_CheckForCamps()
+    protected void DEF_CheckForRadiowaveTransmitters()
     {
         ref array<int> distanceThresholds = {
             10, 
@@ -145,10 +146,10 @@ modded class TransmitterBase //extends ItemTransmitter
             2000
         };
 
-        float closestDistance = 999999; //Used to not play multiple sound for different camps in range
-        foreach (vector campPos : TransmitterBase.s_ActiveDynamicCamps)
+        float closestDistance = 999999; //Used to not play multiple sound for different radiowaveTransmitters in range
+        foreach (vector radiowaveTransmitterPos : TransmitterBase.s_ActiveDynamicRadiowaveTransmitters)
         {
-            float distance = vector.Distance(GetPosition(), campPos);
+            float distance = vector.Distance(GetPosition(), radiowaveTransmitterPos);
             if (distance < closestDistance)
                 closestDistance = distance;
         }
@@ -157,14 +158,14 @@ modded class TransmitterBase //extends ItemTransmitter
         {
             if (closestDistance < threshold)
             {
-                string distanceBasedSound = SOUND_CAMP_DETECTED + threshold;
+                string distanceBasedSound = SOUNDSET__RADIOWAVE_TRANSMITTER_DETECTED + threshold;
                 PlaySoundSet(m_DetectionSound, distanceBasedSound, 1.0, 1.0);
 
                 if (debug)
                 {
-                    Print("PLAYING: " + distanceBasedSound + " (closest camp)");
+                    Print("PLAYING: " + distanceBasedSound + " (closest radiowaveTransmitter)");
                 }
-                
+
                 break;
             }
         }

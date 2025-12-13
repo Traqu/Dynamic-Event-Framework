@@ -38,7 +38,7 @@ class CfgVehicles
 
     class DEF_DynamicEventObject : HouseNoDestruct
     {
-        scope=2;    //TODO (if persistence issued occur) ~Sumrak - https://discord.com/channels/452035973786632194/499468381960011797/661593561141346314
+        scope=1;    //TODO (if persistence issued occur) ~Sumrak - https://discord.com/channels/452035973786632194/499468381960011797/661593561141346314
         storageCategory=4;
     };
 

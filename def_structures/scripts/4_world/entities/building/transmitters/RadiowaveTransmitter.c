@@ -6,7 +6,7 @@ class DEF_RadiowaveTransmitter extends DEF_DynamicEventObject
 
             if (GetGame().IsClient())
             {
-                TransmitterBase.DEF_AddCampToList(GetPosition());
+                TransmitterBase.DEF_AddTransmitterToList(GetPosition());
             }
         }
 
@@ -16,7 +16,7 @@ class DEF_RadiowaveTransmitter extends DEF_DynamicEventObject
 
             if (GetGame().IsClient())
             {
-                TransmitterBase.DEF_RemoveCampFromList(GetPosition());
+                TransmitterBase.DEF_RemoveTransmitterFromList(GetPosition());
             }
         }
 };
