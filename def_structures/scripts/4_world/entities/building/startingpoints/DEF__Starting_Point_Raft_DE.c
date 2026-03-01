@@ -21,4 +21,4 @@ class DEF__Starting_Point_Raft_DE extends GameLabsLiveIndicator
     #endif
         super.EEInit();
     };
-}
+};

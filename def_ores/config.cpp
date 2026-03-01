@@ -52,7 +52,7 @@ class CfgVehicles
 		};
 	}
 
-	class DEF_Nugget_Base: Inventory_Base
+	class DEF_Chunk_Base: Inventory_Base
 	{
 		scope=0;
 		// animClass = "Knife";
@@ -164,7 +164,6 @@ class CfgVehicles
 		};
 	};
 
-
 	//scope=2;
 
 	class Gunpowder_DEF: DEF_Powder_Base
@@ -182,12 +181,12 @@ class CfgVehicles
 		model = "\DynamicEventFramework\def_ores\data\shards\obsidian\obsidian.p3d";
 	};
 
-	class Obsidian_Nugget_DEF: DEF_Nugget_Base
+	class Obsidian_Chunk_DEF: DEF_Chunk_Base
 	{
 		scope = 2;
-		displayName = "$STR_ObsidianNugget0";
-		descriptionShort = "$STR_ObsidianNugget1";
+		displayName = "$STR_ObsidianChunk0";
+		descriptionShort = "$STR_ObsidianChunk1";
 		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"DynamicEventFramework\def_ores\data\shards\obsidian\obsidian_co.paa"};	//TODO fix texture and source paa file.
+		hiddenSelectionsTextures[] = {"DynamicEventFramework\def_ores\data\shards\obsidian\obs_co.paa"};
 	};
 };

@@ -1025,20 +1025,17 @@ class CfgVehicles
 
     class DEF_Wreck_AC130J_DE: DEF_DynamicEventObject
     {
-        model="DynamicEventFramework\def_structures\data\watermark\J.p3d";
-        // model="DZ\structures\wrecks\Aircraft\Wreck_C130J.p3d";
+        model="DZ\structures\wrecks\Aircraft\Wreck_C130J.p3d";
     };
 
     class DEF_Wreck_AC130J_2_DE: DEF_DynamicEventObject
     {
-        model="DynamicEventFramework\def_structures\data\watermark\J2.p3d";
-        // model="DZ\structures\wrecks\Aircraft\Wreck_C130J_2.p3d";
+        model="DZ\structures\wrecks\Aircraft\Wreck_C130J_2.p3d";
     };
 
     class DEF_Wreck_AC130J_Cargo_DE: DEF_DynamicEventObject
     {
-        model="DynamicEventFramework\def_structures\data\watermark\JCargo.p3d";
-        // model="DZ\structures\wrecks\Aircraft\Wreck_C130J_Cargo.p3d";
+        model="DZ\structures\wrecks\Aircraft\Wreck_C130J_Cargo.p3d";
     };
 
     //class DEF_Wreck_Ambulance_New_DE: DEF_DynamicEventObject
@@ -1407,9 +1404,21 @@ class CfgSoundsets
     class WaterStream_SoundSet;
     class HeliCrash_Distant_Base_SoundSet;
 
+    
+
     class DEF_Dummy_Silent_SoundSet: HeliCrash_Distant_Base_SoundSet
     {
         soundShaders[] = {"DEF_Dummy_Silent_SoundShader"};
+    };
+
+    class DEF_Ordnance_Overhead_Wizz_SoundSet: HeliCrash_Distant_Base_SoundSet
+    {
+        soundShaders[] = {"DEF_Ordnance_Overhead_Wizz_SoundShader"};
+    };
+
+    class DEF_Asteroid_SoundSet: HeliCrash_Distant_Base_SoundSet
+    {
+        soundShaders[] = {"DEF_Asteroid_SoundShader"};
     };
 
     class DEF_Shipwreck_SoundSet: HeliCrash_Distant_Base_SoundSet
@@ -1420,6 +1429,7 @@ class CfgSoundsets
     class DEF_PlaneCrash_Distant_SoundSet: HeliCrash_Distant_Base_SoundSet
     {
         soundShaders[] = {"PlaneCrash_Distant_SoundShader"};
+		sound3DProcessingType = "ThunderNear3DProcessingType"; // TODO : ? Check if this is needed, or if the shader's own processing type is enough
     };
 
     class DEF_BoatWaves_SoundSet: WaterStream_SoundSet
@@ -1520,11 +1530,46 @@ class CfgSoundshaders
 		range = 0;
 	};
 
+    class DEF_Ordnance_Overhead_Wizz_SoundShader
+	{
+		samples[] =
+		{
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_1", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_2", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_3", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_4", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_5", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_6", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_7", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_8", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_9", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_10", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_11", 1},
+			{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead_12", 1}
+		};
+		volume = 2.00;
+		range = 3000;
+	};
+
+    class DEF_Asteroid_SoundShader
+	{
+		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\ordnance\whizzOverhead", 1}};
+		volume = 2.00;
+		range = 3000;
+	};
+
     class DEF_Shipwreck_SoundShader
 	{
 		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\shipHorn_2", 1}};
 		volume = 2.00;
 		range = 3000;
+	};
+
+    class PlaneCrash_Distant_SoundShader
+	{
+		samples[] = {{"dynamiceventframework\def_structures\data\sounds\environment\planecrash", 1}};
+		volume = 1.5;
+		range = 4000;
 	};
 
     class DEF_BoatWaves_SoundShader

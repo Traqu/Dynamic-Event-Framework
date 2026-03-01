@@ -21,4 +21,4 @@ class DEF__Starting_Point_AC130JCrash_DE extends GameLabsLiveIndicator
     #endif
         super.EEInit();
     };
-}
+};

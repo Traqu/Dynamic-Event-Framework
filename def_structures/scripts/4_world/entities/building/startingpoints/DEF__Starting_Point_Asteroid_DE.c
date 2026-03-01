@@ -4,13 +4,13 @@ class DEF__Starting_Point_Asteroid_DE extends GameLabsLiveIndicator
 
     static bool SoundInit()
     {
-        CrashSoundSets.RegisterSoundSet("DEF_Dummy_Silent_SoundSet");
+        CrashSoundSets.RegisterSoundSet("DEF_Ordnance_Overhead_Wizz_SoundSet");
         return true;
     };
 
     override string GetSoundSet()
     {
-        return "DEF_Dummy_Silent_SoundSet";
+        return "DEF_Ordnance_Overhead_Wizz_SoundSet";
     };
 
     override void EEInit()
@@ -21,4 +21,4 @@ class DEF__Starting_Point_Asteroid_DE extends GameLabsLiveIndicator
     #endif
         super.EEInit();
     };
-}
+};
