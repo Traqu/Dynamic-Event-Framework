@@ -20,6 +20,12 @@ class ActionMineObsidianChunk : ActionMineRock
 		m_Text = "#crumbleObsidianChunk";
 	}
 
+	override void CreateConditionComponents()  
+	{		
+		m_ConditionTarget = new CCTCursor(UAMaxDistances.SMALL);
+		m_ConditionItem = new CCINonRuined;
+	}
+
 	override void OnActionInfoUpdate(PlayerBase player, ActionTarget target, ItemBase item)
 	{
 		m_Text = "#crumbleObsidianChunk";
@@ -51,7 +57,7 @@ class ActionMineObsidianChunk : ActionMineRock
 
 		for (int i = 0; i < spawnCount; i++)
 		{
-			vector dropPosition = spawnPosition + Vector(Math.RandomFloatInclusive(-0.1, 0.1), 0, Math.RandomFloatInclusive(-0.1, 0.1));
+			vector dropPosition = spawnPosition + Vector(Math.RandomFloatInclusive(-0.1, 0.5), 0, Math.RandomFloatInclusive(-0.1, 0.5));
 			ItemBase shard = ItemBase.Cast(GetGame().CreateObjectEx("Obsidian_Shard_DEF", dropPosition, ECE_PLACE_ON_SURFACE));
 
 			if (shard)

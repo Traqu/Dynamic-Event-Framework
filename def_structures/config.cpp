@@ -38,8 +38,10 @@ class CfgVehicles
 
     class DEF_DynamicEventObject : HouseNoDestruct
     {
-        scope=1;    //TODO (if persistence issued occur) ~Sumrak - https://discord.com/channels/452035973786632194/499468381960011797/661593561141346314
+        scope=1;    //TODO (if persistence issues occur) ~Sumrak - https://discord.com/channels/452035973786632194/499468381960011797/661593561141346314
         storageCategory=4;
+
+        model="DynamicEventFramework\def_structures\data\empty.p3d" //DZE stopped showing objects without P3D, so this one is added for particles for example
     };
 
     //*  C:\Users\USER\Documents\DayZ Projects\DZ\structures\wrecks → check ancestors.
@@ -834,7 +836,7 @@ class CfgVehicles
 
     class DEF_Misc_Table_Camp_Small_DE: DEF_DynamicEventObject
     {
-        model="C:\Users\piotr\Documents\DayZ Projects\DZ\structures\residential\misc\misc_table_camp_small.p3d";
+        model="DZ\structures\residential\Misc\Misc_Table_Camp_Small.p3d";
     };
 
     class DEF_Misc_Tirepile_Group_DE: DEF_DynamicEventObject
