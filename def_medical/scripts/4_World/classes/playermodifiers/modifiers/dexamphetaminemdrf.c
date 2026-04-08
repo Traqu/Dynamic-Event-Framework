@@ -102,4 +102,4 @@ class DexamphetamineMdfr: ModifierBase
             modifiersManager.ActivateModifier(eModifiers.MDF_EPINEPHRINE);
         };
     };
-};;
+};

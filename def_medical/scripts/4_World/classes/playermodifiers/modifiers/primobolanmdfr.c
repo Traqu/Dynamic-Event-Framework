@@ -38,12 +38,24 @@ class PrimobolanMdfr : ModifierBase
 			player.AddHealth("", "Blood", 600); //* mimics the effect of anemia curing that takes place irl.
         };
 
+		StaminaHandler staminaHandler = player.GetStaminaHandler();
+		if (staminaHandler)
+		{
+			staminaHandler.DEF_SetPrimobolanState(true);
+		}
+
         m_FromReconnect = false;
     };
 
 	override void OnDeactivate(PlayerBase player)
 	{
 		player.DecreaseHealingsCount();
+
+		StaminaHandler staminaHandler = player.GetStaminaHandler();
+		if (staminaHandler)
+		{
+			staminaHandler.DEF_SetPrimobolanState(false);
+		}
 	};
 
 	override bool DeactivateCondition(PlayerBase player)
@@ -64,4 +76,4 @@ class PrimobolanMdfr : ModifierBase
 	{
 				//player.GetStaminaHandler().SetStamina(100);
 	};
-};;
+};

@@ -6,9 +6,9 @@ modded class MissionGameplay
 		GetRPCManager().SendRPC("DEF_MEDICINE", "GetMedicineServerConfig");
 	};
 
-	void ClientStoreMedicineConfig(CallType type, ParamsReadContext ctx, PlayerIdentity sender, Object target)
+	void ClientStoreMedicineConfig(int type, ParamsReadContext ctx, PlayerIdentity sender, Object target)
 	{
-		if (type == CallType.Client)
+		if (GetGame().IsClient())
 		{
 			Param1<ref MedicineConfig> data;
 			if (!ctx.Read(data)) return;

@@ -53,4 +53,4 @@ class AdderallComsumptionMdfr : ModifierBase
 	{
 		//player.GetStaminaHandler().SetStamina(100);
 	};
-};;
+};

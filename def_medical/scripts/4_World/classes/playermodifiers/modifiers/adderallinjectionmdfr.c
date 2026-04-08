@@ -53,4 +53,4 @@ class AdderallInjectionMdfr : ModifierBase
 	{
 		//player.GetStaminaHandler().SetStamina(100);
 	};
-};;
+};

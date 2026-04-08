@@ -12,11 +12,17 @@ modded class MissionServer
     	Print("[DynamicEventFramework] OnInit - Loaded config successfully ver. " + GetMedicineConfig().ConfigVersion);
     };
 
-    void GetMedicineServerConfig(CallType type, ParamsReadContext ctx, PlayerIdentity sender, Object target)
+    void GetMedicineServerConfig(int type, ParamsReadContext ctx, PlayerIdentity sender, Object target)
     {
-        if (type == CallType.Server)
+        if (GetGame().IsServer())
         {
-            Print("[DynamicEventFramework] Received medicine config request from " + sender.GetId());
+            string senderId = "unknown";
+            if (sender)
+            {
+                senderId = sender.GetId();
+            }
+
+            Print("[DynamicEventFramework] Received medicine config request from " + senderId);
             GetRPCManager().SendRPC("DEF_MEDICINE", "ClientStoreMedicineConfig", new Param1<ref MedicineConfig>(GetMedicineConfig()), true, sender);
         }
     };
