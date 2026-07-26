@@ -13,12 +13,4 @@ class DEF__Starting_Point_Paratrooper_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "scarecrow";
-        _eventDisplayName = "Hanged paratrooper";
-    #endif
-        super.EEInit();
-    };
 };

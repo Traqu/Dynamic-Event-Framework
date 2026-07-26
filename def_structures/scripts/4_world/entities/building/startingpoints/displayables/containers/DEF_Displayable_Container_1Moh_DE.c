@@ -13,12 +13,4 @@ class DEF_Displayable_Container_1Moh_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "container-storage"
-        _eventDisplayName = "Washed container"
-    #endif
-        super.EEInit();
-    };
 }

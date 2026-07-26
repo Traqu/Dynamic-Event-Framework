@@ -13,12 +13,4 @@ class DEF__Starting_Point_Asteroid_DE extends GameLabsLiveIndicator
         return "DEF_Ordnance_Overhead_Wizz_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "meteor";
-        _eventDisplayName = "Meteorite";
-    #endif
-        super.EEInit();
-    };
 };

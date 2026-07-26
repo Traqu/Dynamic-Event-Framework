@@ -13,12 +13,4 @@ class DEF__Starting_Point_HuntingCamp_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "campfire";
-        _eventDisplayName = "Survivor camp";
-    #endif
-        super.EEInit();
-    };
 };

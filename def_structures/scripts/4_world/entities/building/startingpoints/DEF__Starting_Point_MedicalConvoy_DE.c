@@ -13,12 +13,4 @@ class DEF__Starting_Point_MedicalConvoy_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "ambulance";
-        _eventDisplayName = "Medical convoy";
-    #endif
-        super.EEInit();
-    };
 };

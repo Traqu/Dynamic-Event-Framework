@@ -13,12 +13,4 @@ class DEF__Starting_Point_Boat_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "anchor";
-        _eventDisplayName = "Boat";
-    #endif
-        super.EEInit();
-    };
 };

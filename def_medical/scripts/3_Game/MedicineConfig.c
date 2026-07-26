@@ -46,5 +46,6 @@ static MedicineConfig GetMedicineConfig()
 		g_MedicineConfig = new MedicineConfig;
 		g_MedicineConfig.Load();
 	};
+	
 	return g_MedicineConfig;
 };

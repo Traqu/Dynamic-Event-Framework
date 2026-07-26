@@ -13,12 +13,4 @@ class DEF__Starting_Point_Shipwreck_DE extends GameLabsLiveIndicator
         return "DEF_Shipwreck_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "ship";
-        _eventDisplayName = "Container ship";
-    #endif
-        super.EEInit();
-    };
 };

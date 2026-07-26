@@ -13,12 +13,4 @@ class DEF__Starting_Point_Roadblock_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "minus-octagon";
-        _eventDisplayName = "Roadblock";
-    #endif
-        super.EEInit();
-    };
 };

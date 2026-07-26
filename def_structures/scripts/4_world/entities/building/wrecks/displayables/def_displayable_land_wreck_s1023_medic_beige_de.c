@@ -14,12 +14,4 @@ class DEF_Displayable_Land_Wreck_S1023_Medic_Beige_DE extends GameLabsLiveIndica
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "ambulance"
-        _eventDisplayName = "Ambulance"
-    #endif
-        super.EEInit();
-    };
 }

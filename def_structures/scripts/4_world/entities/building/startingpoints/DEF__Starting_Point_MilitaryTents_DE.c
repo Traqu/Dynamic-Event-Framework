@@ -13,12 +13,4 @@ class DEF__Starting_Point_MilitaryTents_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "campground";
-        _eventDisplayName = "Military tents";
-    #endif
-        super.EEInit();
-        };
 };

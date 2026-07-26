@@ -1,13 +1,15 @@
 class DEF_Displayable_ContainerLocked_Base : ContainerLockedBase //We discard CrashBase features (audioplay) because of multitasking limitations; that shouldn't be used on this event anyway...
 {
 #ifdef GAMELABS
-    protected string _eventPictogram = "container-storage";
-    protected string _eventDisplayName = "Locked container";
+    protected string _eventPictogram = "question";
+    protected string _eventDisplayName = "Dynamic event";
     private ref _Event _registeredInstance;
 
     override void EEInit()
     {
         super.EEInit();
+
+        LoadEventDisplayConfig();
 
         if (!GetGame().IsServer()) return;
         vector position = GetPosition();
@@ -31,21 +33,28 @@ class DEF_Displayable_ContainerLocked_Base : ContainerLockedBase //We discard Cr
         };
     };
 
-    //*  private string GetEventPictogram()
-    //*  {
-    //*      if (ConfigIsExisting("eventPictogram"))
-    //*      {
-    //*          return ConfigGetString("eventPictogram");
-    //*      };
-    //*      return "question";
-    //*  };
-    //*  private string GetEventDisplayName()
-    //*  {
-    //*      if (ConfigIsExisting("displayedName"))
-    //*      {
-    //*          return ConfigGetString("displayedName");
-    //*      };
-    //*      return GetType();
-    //*  };
+    protected void LoadEventDisplayConfig()
+    {
+        _eventPictogram = GetEventPictogram();
+        _eventDisplayName = GetEventDisplayName();
+    };
+
+    protected string GetEventPictogram()
+    {
+        if (ConfigIsExisting("eventPictogram"))
+        {
+            return ConfigGetString("eventPictogram");
+        };
+        return "question";
+    };
+
+    protected string GetEventDisplayName()
+    {
+        if (ConfigIsExisting("displayedName"))
+        {
+            return ConfigGetString("displayedName");
+        };
+        return GetType();
+    };
 #endif
 };

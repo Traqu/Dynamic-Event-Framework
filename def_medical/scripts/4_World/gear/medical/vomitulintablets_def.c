@@ -23,8 +23,12 @@ class VomitulinTablets_DEF : Edible_Base
         consumer.GetStatEnergy().Add(-1 * currentEnergy * 0.6);
         consumer.GetStatWater().Add(-1 * currentWater * 0.8);
 
+        int agentsToRemove = eAgents.CHOLERA | eAgents.SALMONELLA | eAgents.FOOD_POISON;
+
 		consumer.RemoveAgent(eAgents.CHOLERA);
 		consumer.RemoveAgent(eAgents.SALMONELLA);
+		consumer.RemoveAgent(eAgents.FOOD_POISON);
+        consumer.GetStomach().DEF_RemoveAgentsFromContents(agentsToRemove);
 
         ModifiersManager modifiersManager = consumer.GetModifiersManager();
 
@@ -33,5 +37,8 @@ class VomitulinTablets_DEF : Edible_Base
 
 		if (modifiersManager.IsModifierActive(eModifiers.MDF_SALMONELLA))
 		    modifiersManager.DeactivateModifier(eModifiers.MDF_SALMONELLA);
+
+		if (modifiersManager.IsModifierActive(eModifiers.MDF_POISONING))
+		    modifiersManager.DeactivateModifier(eModifiers.MDF_POISONING);
 	};
 };

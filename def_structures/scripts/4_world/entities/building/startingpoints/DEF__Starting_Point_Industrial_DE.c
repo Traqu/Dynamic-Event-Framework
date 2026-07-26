@@ -13,12 +13,4 @@ class DEF__Starting_Point_Industrial_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "truck-container";
-        _eventDisplayName = "Industrial event";
-    #endif
-        super.EEInit();
-    };
 };

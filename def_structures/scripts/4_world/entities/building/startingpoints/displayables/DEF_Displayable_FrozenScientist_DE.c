@@ -13,12 +13,4 @@ class DEF_Displayable_FrozenScientist_DE extends GameLabsLiveIndicator
         return "DEF_Dummy_Silent_SoundSet";
     };
 
-    override void EEInit()
-    {
-    #ifdef GAMELABS
-        _eventPictogram = "head-side-virus"
-        _eventDisplayName = "Frozen scientist"
-    #endif
-        super.EEInit();
-    };
 }

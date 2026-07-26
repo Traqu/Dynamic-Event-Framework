@@ -11,6 +11,8 @@ class GameLabsLiveIndicator extends CrashBase
     {
         super.EEInit();
 
+        LoadEventDisplayConfig();
+
         if (!GetGame().IsServer()) return;
         vector position = GetPosition();
         if (position[0] <= 0 && position[1] <= 0 && position[2] <= 0) return;
@@ -33,21 +35,28 @@ class GameLabsLiveIndicator extends CrashBase
         };
     };
 
-    //*  private string GetEventPictogram()
-    //*  {
-    //*      if (ConfigIsExisting("eventPictogram"))
-    //*      {
-    //*          return ConfigGetString("eventPictogram");
-    //*      }
-    //*      return "question";
-    //*  }
-    //*  private string GetEventDisplayName()
-    //*  {
-    //*      if (ConfigIsExisting("displayedName"))
-    //*      {
-    //*          return ConfigGetString("displayedName");
-    //*      }
-    //*      return GetType();
-    //*  }
+    protected void LoadEventDisplayConfig()
+    {
+        _eventPictogram = GetEventPictogram();
+        _eventDisplayName = GetEventDisplayName();
+    };
+
+    protected string GetEventPictogram()
+    {
+        if (ConfigIsExisting("eventPictogram"))
+        {
+            return ConfigGetString("eventPictogram");
+        };
+        return "question";
+    };
+
+    protected string GetEventDisplayName()
+    {
+        if (ConfigIsExisting("displayedName"))
+        {
+            return ConfigGetString("displayedName");
+        };
+        return GetType();
+    };
 #endif
 };

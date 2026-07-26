@@ -22,6 +22,11 @@ class CfgMods
 		dependencies[] = {"World"};
 		class defs
 		{
+			class gameScriptModule
+			{
+				value = "";
+				files[] = {"DynamicEventFramework/def_structures/Scripts/3_Game"};
+			};
 			class worldScriptModule
 			{
 				value = "";
@@ -188,6 +193,8 @@ class CfgVehicles
     {
         scope=1;
         storageCategory=4; //Kept to stay consistent
+        eventPictogram = "ambulance";
+        displayedName = "Ambulance";
     };
 
     class DEF_Displayable_Container_1Moh_DE: Land_Container_1Moh //!Animated
@@ -1397,6 +1404,7 @@ class CfgVehicles
     class DEF_PARTICLE_SMOKE_GENERIC_WRECK_DE: DEF_DynamicEventObject{};
     class DEF_PARTICLE_SMOKING_CAR_ENGINE_DE: DEF_DynamicEventObject{};
     class DEF_PARTICLE_SMOKING_HELI_WRECK_DE: DEF_DynamicEventObject{};
+    class DEF_PARTICLE_SMOKING_PLANE_WRECK_DE: DEF_DynamicEventObject{};
     class DEF_PARTICLE_VOLCANO_DE: DEF_DynamicEventObject{};
 };
 
